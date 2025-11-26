@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Portal | 6phene</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        body {
+            background: var(--color-bg-main);
+            min-height: 100vh;
+        }
+
+        .portal-header {
+            background: var(--color-bg-secondary);
+            border-bottom: 1px solid var(--color-border);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .portal-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .user-menu {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--gradient-accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--color-bg-main);
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-card {
+            background: var(--color-bg-card);
+            border: 1px solid var(--color-border);
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            backdrop-filter: blur(12px);
+            transition: var(--transition-base);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--color-primary);
+        }
+
+        .stat-label {
+            color: var(--color-text-secondary);
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--color-text-primary);
+        }
+
+        .invoice-table {
+            background: var(--color-bg-card);
+            border: 1px solid var(--color-border);
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            backdrop-filter: blur(12px);
+        }
+
+        .table-header {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 1rem 1.5rem;
+            text-align: left;
+        }
+
+        th {
+            color: var(--color-text-secondary);
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        tr {
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        tr:last-child {
+            border-bottom: none;
+        }
+
+        tr:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .status-paid {
+            background: rgba(16, 185, 129, 0.1);
+            color: #10b981;
+        }
+
+        .status-pending {
+            background: rgba(251, 191, 36, 0.1);
+            color: #fbbf24;
+        }
+
+        .status-overdue {
+            background: rgba(239, 68, 68, 0.1);
+            color: #ef4444;
+        }
+    </style>
+</head>
+<body>
+    <header class="portal-header">
+        <div class="container portal-nav">
+            <a href="index.html" class="logo">6<span>phene</span></a>
+            <div class="user-menu">
+                <span style="color: var(--color-text-secondary);">Welcome, <strong id="username">Admin</strong></span>
+                <div class="user-avatar" id="avatar">A</div>
+                <button onclick="logout()" class="btn btn-outline" style="padding: 0.5rem 1rem;">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 3rem 1rem;">
+        <h1 style="margin-bottom: 2rem;">My Account</h1>
+
+        <!-- Stats Overview -->
+        <div class="dashboard-grid">
+            <div class="stat-card fade-in">
+                <div class="stat-label">Total Invoices</div>
+                <div class="stat-value" id="totalInvoices">0</div>
+            </div>
+            <div class="stat-card fade-in">
+                <div class="stat-label">Total Spent</div>
+                <div class="stat-value" id="totalSpent">$0.00</div>
+            </div>
+            <div class="stat-card fade-in">
+                <div class="stat-label">Outstanding Balance</div>
+                <div class="stat-value" style="color: var(--color-primary);" id="outstanding">$0.00</div>
+            </div>
+        </div>
+
+        <!-- Invoices Table -->
+        <div class="invoice-table fade-in" style="margin-top: 3rem;">
+            <div class="table-header">
+                <h2>My Invoices</h2>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Invoice #</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="invoiceTableBody">
+                    <!-- Placeholder Data -->
+                    <tr>
+                        <td><strong>INV-2025-001</strong></td>
+                        <td>Jan 15, 2025</td>
+                        <td><strong>$2,450.00</strong></td>
+                        <td><span class="status-badge status-paid">Paid</span></td>
+                        <td><a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.875rem;">View PDF</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>INV-2025-002</strong></td>
+                        <td>Jan 20, 2025</td>
+                        <td><strong>$1,890.00</strong></td>
+                        <td><span class="status-badge status-pending">Pending</span></td>
+                        <td><a href="#" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Pay Now</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>INV-2024-089</strong></td>
+                        <td>Dec 10, 2024</td>
+                        <td><strong>$3,200.00</strong></td>
+                        <td><span class="status-badge status-paid">Paid</span></td>
+                        <td><a href="#" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.875rem;">View PDF</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Account Settings Link -->
+        <div style="margin-top: 3rem; text-align: center;">
+            <a href="reset-password.html" class="btn btn-outline">Change Password</a>
+        </div>
+    </main>
+
+    <script src="js/particles.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Check if user is logged in
+        const userRole = sessionStorage.getItem('userRole');
+        const username = sessionStorage.getItem('username');
+
+        if (!userRole || userRole !== 'customer') {
+            // Redirect to login if not authenticated
+            window.location.href = '/login.html';
+        }
+
+        // Display username
+        if (username) {
+            document.getElementById('username').textContent = username.charAt(0).toUpperCase() + username.slice(1);
+            document.getElementById('avatar').textContent = username.charAt(0).toUpperCase();
+        }
+
+        // Calculate stats from placeholder data
+        const invoices = [
+            { amount: 2450, status: 'Paid' },
+            { amount: 1890, status: 'Pending' },
+            { amount: 3200, status: 'Paid' }
+        ];
+
+        const totalInvoices = invoices.length;
+        const totalSpent = invoices.reduce((sum, inv) => sum + inv.amount, 0);
+        const outstanding = invoices.filter(inv => inv.status === 'Pending').reduce((sum, inv) => sum + inv.amount, 0);
+
+        document.getElementById('totalInvoices').textContent = totalInvoices;
+        document.getElementById('totalSpent').textContent = `$${totalSpent.toLocaleString()}.00`;
+        document.getElementById('outstanding').textContent = `$${outstanding.toLocaleString()}.00`;
+
+        function logout() {
+            sessionStorage.clear();
+            window.location.href = '/login.html';
+        }
+    </script>
+</body>
+</html>
+
+
+

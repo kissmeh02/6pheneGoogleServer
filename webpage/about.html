@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | 6phene</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/overrides.css?v=pro_dark">
+    <link rel="stylesheet" href="/css/animations.css?v=1.0">
+    <link rel="stylesheet" href="/css/performance.css?v=1.0">
+    
+    <style>
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 6rem;
+        }
+        
+        @media (max-width: 768px) {
+            .story-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        .info-block {
+            margin-bottom: 2rem;
+            padding-left: 1.5rem;
+            border-left: 2px solid var(--color-primary);
+        }
+
+        .info-block h3 {
+            color: var(--color-primary);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 6px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--color-primary);
+            box-shadow: 0 0 10px var(--color-primary);
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 24px;
+            bottom: -24px;
+            width: 2px;
+            background: rgba(56, 189, 248, 0.2);
+        }
+
+        .timeline-item:last-child::after {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="canvas-container"></div>
+    
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">6<span>phene</span></a>
+            <div class="nav-links">
+                <a href="products.html">Products</a>
+                <a href="technology.html">Technology</a>
+                <a href="index.html#solutions">Solutions</a>
+                <a href="about.html" style="color: var(--color-primary);">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="cart-btn" onclick="document.getElementById('cartModal').classList.add('open')" title="Shopping Cart">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span id="cart-count" class="cart-badge">0</span>
+                </a>
+                <a href="login.html" class="account-link">My Account</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero -->
+        <section class="section" style="padding-top: 120px; padding-bottom: 4rem; text-align: center;">
+            <div class="container fade-in">
+                <h1 style="font-size: 3.5rem; margin-bottom: 1.5rem;">The Graphene Revolution</h1>
+                <p style="color: var(--color-text-secondary); font-size: 1.25rem; max-width: 800px; margin: 0 auto;">
+                    Bridging the gap between theoretical physics and industrial reality. <br>We are 6phene.
+                </p>
+            </div>
+        </section>
+
+        <!-- The Material (Graphene) -->
+        <section class="section">
+            <div class="container">
+                <div class="story-grid fade-in">
+                    <div>
+                        <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">The Material</h2>
+                        
+                        <div class="info-block">
+                            <h3>What is it?</h3>
+                            <p style="color: var(--color-text-secondary);">
+                                Graphene is a single layer of carbon atoms arranged in a two-dimensional honeycomb lattice. It is the basic building block for other graphite materials but possesses miraculous properties on its own.
+                            </p>
+                        </div>
+
+                        <div class="info-block">
+                            <h3>Why does it matter?</h3>
+                            <p style="color: var(--color-text-secondary);">
+                                It is the strongest material ever tested (200x stronger than steel), the best conductor of heat and electricity, and nearly transparent. It has the potential to revolutionize batteries, computing, and construction.
+                            </p>
+                        </div>
+
+                        <div class="info-block">
+                            <h3>When was it found?</h3>
+                            <p style="color: var(--color-text-secondary);">
+                                While theorized for decades, it was first isolated in 2004 at the University of Manchester, earning Geim and Novoselov the Nobel Prize in Physics in 2010.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card" style="height: 100%; min-height: 400px; display: flex; align-items: center; justify-content: center; text-align: center;">
+                        <div>
+                            <div style="width: 80px; height: 80px; margin-bottom: 1rem; color: var(--color-primary);">
+                                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M12 2v4M12 18v4M2 12h4M18 12h4"></path>
+                                    <path d="M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+                                </svg>
+                            </div>
+                            <h3>"The Wonder Material"</h3>
+                            <p style="margin-top: 1rem; color: var(--color-text-secondary);">1 Square Meter weighs only 0.77mg <br>but can support 4kg.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Company (6phene) -->
+        <section class="section" style="background: rgba(255,255,255,0.02);">
+            <div class="container">
+                <div class="story-grid fade-in">
+                    <!-- Reverse order on desktop -->
+                    <div class="feature-card" style="height: 100%; min-height: 400px; display: flex; flex-direction: column; justify-content: center;">
+                         <div class="timeline-item">
+                            <h4 style="margin-bottom: 0.5rem; color: white;">2020: Foundation</h4>
+                            <p style="font-size: 0.9rem; color: var(--color-text-secondary);">6phene Inc. established in Guelph to commercialize CVD synthesis methods.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4 style="margin-bottom: 0.5rem; color: white;">2022: Breakthrough</h4>
+                            <p style="font-size: 0.9rem; color: var(--color-text-secondary);">Achieved industrial-scale production of defect-free monolayer graphene.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4 style="margin-bottom: 0.5rem; color: white;">2024: Expansion</h4>
+                            <p style="font-size: 0.9rem; color: var(--color-text-secondary);">Partnered with major defense contractors for ballistic plate manufacturing.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4 style="margin-bottom: 0.5rem; color: white;">2025: Global Reach</h4>
+                            <p style="font-size: 0.9rem; color: var(--color-text-secondary);">Supply chain integration across North America and Europe.</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Our Company</h2>
+                        
+                        <div class="info-block">
+                            <h3>Who We Are</h3>
+                            <p style="color: var(--color-text-secondary);">
+                                We are a collective of chemical engineers, material scientists, and manufacturing experts dedicated to the carbon revolution.
+                            </p>
+                        </div>
+
+                        <div class="info-block">
+                            <h3>Where We Are</h3>
+                            <p style="color: var(--color-text-secondary);">
+                                Headquartered in <strong>Guelph, Ontario</strong>, a growing hub for advanced manufacturing and nanotechnology in Canada.
+                            </p>
+                        </div>
+
+                        <div class="info-block">
+                            <h3>Why We Exist</h3>
+                            <p style="color: var(--color-text-secondary);">
+                                To solve the "Graphene Paradox": making a material that is amazing in the lab actually affordable and usable in the factory. We focus on scalability and integration.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section" style="padding: 6rem 0; text-align: center;">
+            <div class="container fade-in">
+                <h2>Join the Future</h2>
+                <p style="color: var(--color-text-secondary); margin: 1rem auto 2rem; max-width: 600px;">
+                    Whether you are an investor, partner, or engineer, there is a place for you at 6phene.
+                </p>
+                <a href="contact.html" class="btn btn-primary">Contact Our Team</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="font-size: 1.5rem; margin-bottom: 1rem;">6<span>phene</span></a>
+                    <p style="color: var(--color-text-secondary); line-height: 1.6;">
+                        Advanced Graphene Nanotechnology.<br>
+                        Pioneering the material revolution.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html" style="color: var(--color-primary);">About</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Solutions</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#solutions">Ballistics</a></li>
+                        <li><a href="index.html#solutions">Energy</a></li>
+                        <li><a href="index.html#solutions">Infrastructure</a></li>
+                    </ul>
+                </div>
+                <div class="copyright">
+                    &copy; 2025 6phene Inc. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="cart-modal">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <h2>Your Cart</h2>
+            <button onclick="document.getElementById('cartModal').classList.remove('open')" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer;">×</button>
+        </div>
+        
+        <div id="cart-items-container" style="flex: 1; overflow-y: auto;">
+            <p class="empty-cart">Your cart is empty.</p>
+        </div>
+        
+        <div style="border-top: 1px solid var(--color-border); padding-top: 1rem; margin-top: 1rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 1rem; font-size: 1.2rem; font-weight: bold;">
+                <span>Total:</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            
+            <form id="checkoutForm" class="checkout-form" onsubmit="event.preventDefault(); window.cart.checkout({
+                name: this.customerName.value,
+                email: this.customerEmail.value,
+                address: this.shippingAddress.value
+            })">
+                <input type="text" name="customerName" placeholder="Full Name" required>
+                <input type="email" name="customerEmail" placeholder="Email Address" required>
+                <input type="text" name="shippingAddress" placeholder="Shipping Address" required>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Place Order</button>
+            </form>
+        </div>
+    </div>
+
+    <style>
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .cart-btn {
+            position: relative;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .cart-btn:hover {
+            color: var(--color-primary);
+            background: rgba(56, 189, 248, 0.1);
+        }
+        .cart-badge {
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            background: var(--color-primary);
+            color: black;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            font-size: 11px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        .account-link {
+            font-size: 0.9rem;
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            position: relative;
+            padding-bottom: 2px;
+            transition: all 0.3s;
+        }
+        .account-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: var(--color-primary);
+            box-shadow: 0 0 4px var(--color-primary);
+        }
+        .account-link:hover {
+            color: var(--color-primary);
+        }
+        .cart-modal {
+            position: fixed;
+            top: 0; right: 0;
+            width: 100%; max-width: 400px;
+            height: 100vh;
+            background: var(--color-bg-card);
+            border-left: 1px solid var(--color-border);
+            z-index: 999;
+            padding: 2rem;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .cart-modal.open { transform: translateX(0); }
+        .empty-cart {
+            color: var(--color-text-secondary);
+            text-align: center;
+            padding: 2rem;
+        }
+        .checkout-form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        .checkout-form input {
+            padding: 0.75rem;
+            border-radius: 8px;
+            border: 1px solid var(--color-border);
+            background: rgba(255,255,255,0.05);
+            color: white;
+        }
+    </style>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/particles.js?v=nebula"></script>
+    <script src="/js/animations.js"></script>
+    <script src="/js/cart.js"></script>
+</body>
+</html>
+

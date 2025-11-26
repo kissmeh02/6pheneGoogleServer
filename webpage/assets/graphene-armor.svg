@@ -1,0 +1,29 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradShield" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#30d158;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a84ff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="100%" height="100%" fill="#101010"/>
+  
+  <!-- Shield Outline -->
+  <path d="M400,100 C400,100 200,150 200,300 C200,450 400,550 400,550 C400,550 600,450 600,300 C600,150 400,100 400,100 Z" 
+        stroke="url(#gradShield)" stroke-width="3" fill="none" />
+        
+  <!-- Hexagon Mesh on Shield -->
+  <pattern id="hexMesh" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M20,0 L40,10 L40,30 L20,40 L0,30 L0,10 Z" fill="none" stroke="#2997ff" stroke-width="0.5" opacity="0.3"/>
+  </pattern>
+  
+  <path d="M400,100 C400,100 200,150 200,300 C200,450 400,550 400,550 C400,550 600,450 600,300 C600,150 400,100 400,100 Z" 
+        fill="url(#hexMesh)" opacity="0.5" />
+
+  <!-- Impact Point -->
+  <circle cx="400" cy="300" r="5" fill="#fff">
+    <animate attributeName="r" values="5;50;5" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite" />
+  </circle>
+</svg>
+

@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>6phene | Advanced Graphene Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/css/variables.css?v=pro_dark">
+    <link rel="stylesheet" href="/css/base.css?v=pro_dark">
+    <link rel="stylesheet" href="/css/components.css?v=pro_dark">
+    <link rel="stylesheet" href="/css/responsive.css?v=pro_dark">
+    <link rel="stylesheet" href="/css/overrides.css?v=pro_dark">
+    <link rel="stylesheet" href="/css/animations.css?v=1.0">
+    <link rel="stylesheet" href="/css/performance.css?v=1.0">
+    <link rel="stylesheet" href="/css/accessibility.css?v=1.0">
+</head>
+<body>
+    <!-- Skip to main content link for screen readers -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <div id="canvas-container"></div>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container nav-content">
+            <a href="#" class="logo">6<span>phene</span></a>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+            <div class="nav-links">
+                <a href="products.html">Products</a>
+                <a href="technology.html">Technology</a>
+                <a href="#solutions">Solutions</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="cart-btn" onclick="document.getElementById('cartModal').classList.add('open')" title="Shopping Cart">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span id="cart-count" class="cart-badge">0</span>
+                </a>
+                <a href="login.html" class="account-link">My Account</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobile-nav">
+        <div class="mobile-nav-header">
+            <a href="#" class="logo">6<span>phene</span></a>
+            <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="products.html">Products</a>
+            <a href="technology.html">Technology</a>
+            <a href="#solutions">Solutions</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="mobile-nav-actions">
+            <a href="#" class="btn btn-outline" onclick="document.getElementById('cartModal').classList.add('open'); closeMobileMenu();">Shopping Cart</a>
+            <a href="login.html" class="btn btn-primary">My Account</a>
+        </div>
+    </nav>
+
+    <main id="main-content" role="main">
+        <section class="hero parallax-container" aria-label="Hero section">
+            <div class="hero-bg parallax-element" data-speed="0.3"></div>
+            <div class="hero-mesh parallax-element" data-speed="0.2"></div>
+            <div class="container fade-in">
+                <h1>The Future of Material Science <br> <span class="text-gradient">Is Here</span></h1>
+                <p class="hero-subtitle">
+                    Unlock the potential of graphene with 6phene. We engineer high-performance nanomaterials for the next generation of defense, energy, and industrial applications.
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                    <a href="#solutions" class="btn btn-primary">Explore Solutions</a>
+                    <a href="contact.html" class="btn btn-outline">Partner With Us</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Stats Section -->
+        <div class="container">
+            <div class="stats-container fade-in">
+                <div class="stat-item reveal">
+                    <h3 class="stat-counter">200x</h3>
+                    <p>Stronger than Steel</p>
+                </div>
+                <div class="stat-item reveal">
+                    <h3 class="stat-counter">5x</h3>
+                    <p>Faster Charging</p>
+                </div>
+                <div class="stat-item reveal">
+                    <h3 class="stat-counter">40%</h3>
+                    <p>Lighter Armor</p>
+                </div>
+            </div>
+        </div>
+
+        <section id="technology" class="section">
+            <div class="container">
+                <div class="text-center fade-in">
+                    <h2>Why Graphene?</h2>
+                    <p style="color: var(--color-text-secondary); max-width: 640px; margin: 1rem auto; font-size: 1.125rem;">
+                        The wonder material reshaping industries. 6phene delivers commercial-grade graphene with atomic precision.
+                    </p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card fade-in reveal">
+                        <div class="feature-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 2v4M12 18v4M2 12h4M18 12h4"></path>
+                                <path d="M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+                            </svg>
+                        </div>
+                        <h3>Atomic Strength</h3>
+                        <p>A single layer of carbon atoms arranged in a honeycomb lattice provides unparalleled tensile strength, revolutionizing structural integrity in aerospace and defense.</p>
+                    </div>
+                    <div class="feature-card fade-in reveal">
+                        <div class="feature-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                            </svg>
+                        </div>
+                        <h3>Super Conductivity</h3>
+                        <p>Unmatched electrical and thermal conductivity enables faster electronics, superior heat dissipation, and next-gen energy grids with minimal loss.</p>
+                    </div>
+                    <div class="feature-card fade-in reveal">
+                        <div class="feature-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <h3>Chemical Inertness</h3>
+                        <p>Highly resistant to chemical corrosion and extreme environments, extending the lifecycle of critical infrastructure and marine vessels significantly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="solutions" class="section">
+            <div class="container">
+                <div class="text-center fade-in">
+                    <h2>Our Solutions</h2>
+                    <p style="color: var(--color-text-secondary); max-width: 640px; margin: 1rem auto; font-size: 1.125rem;">
+                        Tailored graphene applications for mission-critical industries.
+                    </p>
+                </div>
+                
+                <!-- Carousel Container -->
+                <div class="carousel-container fade-in" style="position: relative; margin-top: 4rem; overflow: hidden; padding: 1rem 0;">
+                    <!-- Navigation Buttons -->
+                    <button id="prevBtn" class="btn btn-outline" style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); z-index: 10; width: 40px; height: 40px; padding: 0; border-radius: 50%; background: rgba(3,3,4,0.8);">←</button>
+                    <button id="nextBtn" class="btn btn-outline" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); z-index: 10; width: 40px; height: 40px; padding: 0; border-radius: 50%; background: rgba(3,3,4,0.8);">→</button>
+                    
+                    <!-- Track -->
+                    <div id="carouselTrack" style="display: flex; gap: 2rem; transition: transform 0.5s ease-out; padding: 0 3rem;">
+                        
+                        <!-- Item 1: Ballistic -->
+                        <div class="feature-card" style="min-width: calc(33.333% - 1.34rem); flex-shrink: 0;">
+                            <div class="feature-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                    <path d="M12 8v4M12 16h.01"></path>
+                                </svg>
+                            </div>
+                            <h3>Ballistic Protection</h3>
+                            <p>Advanced graphene-composite body armor for military and law enforcement. 40% lighter than Kevlar.</p>
+                        </div>
+
+                        <!-- Item 2: Energy -->
+                        <div class="feature-card" style="min-width: calc(33.333% - 1.34rem); flex-shrink: 0;">
+                            <div class="feature-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                    <path d="M12 3v4M8 3v4M16 3v4"></path>
+                                    <path d="M6 11h12"></path>
+                                </svg>
+                            </div>
+                            <h3>Energy Storage</h3>
+                            <p>Graphene-enhanced electrodes for supercapacitors. 5x faster charge rates with extended cycle life.</p>
+                        </div>
+
+                        <!-- Item 3: Infrastructure -->
+                        <div class="feature-card" style="min-width: calc(33.333% - 1.34rem); flex-shrink: 0;">
+                            <div class="feature-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="3" y1="9" x2="21" y2="9"></line>
+                                    <line x1="9" y1="21" x2="9" y2="9"></line>
+                                </svg>
+                            </div>
+                            <h3>Smart Concrete</h3>
+                            <p>Self-sensing concrete and anti-corrosion coatings for monitoring structural health in real-time.</p>
+                        </div>
+
+                        <!-- Item 4: Electronics (New) -->
+                        <div class="feature-card" style="min-width: calc(33.333% - 1.34rem); flex-shrink: 0;">
+                            <div class="feature-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                                </svg>
+                            </div>
+                            <h3>Thermal Paste</h3>
+                            <p>High-conductivity thermal interface material for next-gen CPU/GPU cooling solutions.</p>
+                        </div>
+
+                        <!-- Item 5: Filtration (New) -->
+                        <div class="feature-card" style="min-width: calc(33.333% - 1.34rem); flex-shrink: 0;">
+                            <div class="feature-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                            </div>
+                            <h3>Water Filtration</h3>
+                            <p>Graphene oxide membranes that filter heavy metals and desalination at the atomic level.</p>
+                        </div>
+
+                        <!-- Item 6: Aerospace (New) -->
+                        <div class="feature-card" style="min-width: calc(33.333% - 1.34rem); flex-shrink: 0;">
+                            <div class="feature-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"></path>
+                                </svg>
+                            </div>
+                            <h3>Composite Resins</h3>
+                            <p>Ultra-lightweight reinforced epoxies for aerospace fuselage and wing components.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <div class="flex items-center justify-between fade-in" style="flex-wrap: wrap; gap: 4rem;">
+                    <div style="flex: 1; min-width: 300px;">
+                        <h2 style="margin-bottom: 1.5rem;">Engineering the Future</h2>
+                        <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem; font-size: 1.125rem;">
+                            Based in Guelph, Canada, <strong style="color: var(--color-primary)">6phene</strong> is at the forefront of graphene nanotechnology. We bridge the gap between laboratory research and commercial application, scaling atomic perfection to industrial quantities.
+                        </p>
+                        <p style="color: var(--color-text-secondary); margin-bottom: 2rem; font-size: 1.125rem;">
+                            Our team works directly with defense contractors and manufacturers to integrate nanomaterials into existing supply chains without disrupting production.
+                        </p>
+                        <a href="about.html" class="btn btn-outline">Learn More About Us</a>
+                    </div>
+                    <div style="flex: 1; min-width: 300px; height: 400px; background: var(--color-bg-card); border-radius: var(--border-radius-lg); display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid var(--color-border); position: relative; overflow: hidden;">
+                        <!-- REPLACED WITH ACTUAL ASSET -->
+                        <img src="assets/graphene-structure.svg" alt="Graphene Lattice Structure" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.4;">
+                        <div style="text-align: center; z-index: 1;">
+                            <span style="font-size: 4rem;">🇨🇦</span>
+                            <p style="color: var(--color-text-primary); margin-top: 1rem; font-weight: 600; letter-spacing: 0.05em;">ENGINEERED IN GUELPH</p>
+                            <p style="color: var(--color-text-secondary); font-size: 0.875rem;">Ontario, Canada</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section" style="padding-bottom: 4rem;">
+            <div class="container text-center fade-in">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ready to Innovate?</h2>
+                <p style="color: var(--color-text-secondary); margin: 0 auto 3rem; max-width: 600px; font-size: 1.125rem;">
+                    Contact our team in Guelph to discuss your project requirements.
+                </p>
+                <a href="contact.html" class="btn btn-primary" style="padding: 1rem 3rem; font-size: 1.125rem;">Get in Touch</a>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section section" aria-label="Client testimonials">
+            <div class="container">
+                <div class="text-center fade-in">
+                    <h2>Trusted by Industry Leaders</h2>
+                    <p style="color: var(--color-text-secondary); max-width: 640px; margin: 1rem auto; font-size: 1.125rem;">
+                        See what our partners say about working with 6phene
+                    </p>
+                </div>
+                
+                <!-- Client Logos -->
+                <div class="client-logos fade-in" style="display: flex; justify-content: center; align-items: center; gap: 3rem; flex-wrap: wrap; margin: 3rem 0; padding: 2rem 0; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+                    <div class="client-logo" style="opacity: 0.6; filter: grayscale(100%); transition: all 0.3s; cursor: default;">
+                        <div style="font-size: 1.5rem; font-weight: 700; color: var(--color-text-secondary);">DEFENSE CORP</div>
+                    </div>
+                    <div class="client-logo" style="opacity: 0.6; filter: grayscale(100%); transition: all 0.3s; cursor: default;">
+                        <div style="font-size: 1.5rem; font-weight: 700; color: var(--color-text-secondary);">AEROSPACE INC</div>
+                    </div>
+                    <div class="client-logo" style="opacity: 0.6; filter: grayscale(100%); transition: all 0.3s; cursor: default;">
+                        <div style="font-size: 1.5rem; font-weight: 700; color: var(--color-text-secondary);">ENERGY SYSTEMS</div>
+                    </div>
+                </div>
+                
+                <!-- Testimonials Grid -->
+                <div class="testimonials-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 4rem;">
+                    <div class="testimonial-card feature-card fade-in reveal">
+                        <div style="margin-bottom: 1.5rem;">
+                            <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;" aria-label="5 star rating">
+                                <span style="color: var(--color-primary); font-size: 1.5rem;">★★★★★</span>
+                            </div>
+                            <p style="color: var(--color-text-secondary); line-height: 1.7; font-style: italic;">
+                                "6phene's graphene composites reduced our armor weight by 40% while maintaining ballistic protection. Game-changing technology for our field operations."
+                            </p>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 1rem; padding-top: 1rem; border-top: 1px solid var(--color-border);">
+                            <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--gradient-accent); display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--color-bg-main);" aria-hidden="true">
+                                JD
+                            </div>
+                            <div>
+                                <div style="font-weight: 600; color: var(--color-text-primary);">John Davis</div>
+                                <div style="font-size: 0.875rem; color: var(--color-text-secondary);">Defense Procurement, Major Contractor</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card feature-card fade-in reveal">
+                        <div style="margin-bottom: 1.5rem;">
+                            <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;" aria-label="5 star rating">
+                                <span style="color: var(--color-primary); font-size: 1.5rem;">★★★★★</span>
+                            </div>
+                            <p style="color: var(--color-text-secondary); line-height: 1.7; font-style: italic;">
+                                "The energy storage solutions from 6phene have revolutionized our battery development. 5x faster charging with extended cycle life - exactly what we needed."
+                            </p>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 1rem; padding-top: 1rem; border-top: 1px solid var(--color-border);">
+                            <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--gradient-accent); display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--color-bg-main);" aria-hidden="true">
+                                SM
+                            </div>
+                            <div>
+                                <div style="font-weight: 600; color: var(--color-text-primary);">Sarah Martinez</div>
+                                <div style="font-size: 0.875rem; color: var(--color-text-secondary);">CTO, Energy Solutions Inc.</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card feature-card fade-in reveal">
+                        <div style="margin-bottom: 1.5rem;">
+                            <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;" aria-label="5 star rating">
+                                <span style="color: var(--color-primary); font-size: 1.5rem;">★★★★★</span>
+                            </div>
+                            <p style="color: var(--color-text-secondary); line-height: 1.7; font-style: italic;">
+                                "Working with 6phene has been exceptional. Their team understands industrial scale-up challenges and delivers consistent, high-quality materials."
+                            </p>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 1rem; padding-top: 1rem; border-top: 1px solid var(--color-border);">
+                            <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--gradient-accent); display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--color-bg-main);" aria-hidden="true">
+                                RK
+                            </div>
+                            <div>
+                                <div style="font-weight: 600; color: var(--color-text-primary);">Robert Kim</div>
+                                <div style="font-size: 0.875rem; color: var(--color-text-secondary);">VP Engineering, Aerospace Manufacturing</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <a href="#" class="logo" style="font-size: 1.5rem; margin-bottom: 1rem;">6<span>phene</span></a>
+                    <p style="color: var(--color-text-secondary); line-height: 1.6;">
+                        Advanced Graphene Nanotechnology.<br>
+                        Pioneering the material revolution.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Solutions</h4>
+                    <ul class="footer-links">
+                        <li><a href="#solutions">Ballistics</a></li>
+                        <li><a href="#solutions">Energy</a></li>
+                        <li><a href="#solutions">Infrastructure</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 6phene Inc. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="cart-modal">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <h2>Your Cart</h2>
+            <button onclick="document.getElementById('cartModal').classList.remove('open')" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer;">×</button>
+        </div>
+        
+        <div id="cart-items-container" style="flex: 1; overflow-y: auto;">
+            <p class="empty-cart">Your cart is empty.</p>
+        </div>
+        
+        <div style="border-top: 1px solid var(--color-border); padding-top: 1rem; margin-top: 1rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 1rem; font-size: 1.2rem; font-weight: bold;">
+                <span>Total:</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            
+            <form id="checkoutForm" class="checkout-form" onsubmit="event.preventDefault(); window.cart.checkout({
+                name: this.customerName.value,
+                email: this.customerEmail.value,
+                address: this.shippingAddress.value
+            })">
+                <input type="text" name="customerName" placeholder="Full Name" required>
+                <input type="email" name="customerEmail" placeholder="Email Address" required>
+                <input type="text" name="shippingAddress" placeholder="Shipping Address" required>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Place Order</button>
+            </form>
+        </div>
+    </div>
+
+    <style>
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .cart-btn {
+            position: relative;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .cart-btn:hover {
+            color: var(--color-primary);
+            background: rgba(56, 189, 248, 0.1);
+        }
+        .cart-badge {
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            background: var(--color-primary);
+            color: black;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            font-size: 11px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        .account-link {
+            font-size: 0.9rem;
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            position: relative;
+            padding-bottom: 2px;
+            transition: all 0.3s;
+        }
+        .account-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: var(--color-primary);
+            box-shadow: 0 0 4px var(--color-primary);
+        }
+        .account-link:hover {
+            color: var(--color-primary);
+        }
+        .cart-modal {
+            position: fixed;
+            top: 0; right: 0;
+            width: 100%; max-width: 400px;
+            height: 100vh;
+            background: var(--color-bg-card);
+            border-left: 1px solid var(--color-border);
+            z-index: 999;
+            padding: 2rem;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .cart-modal.open { transform: translateX(0); }
+        .empty-cart {
+            color: var(--color-text-secondary);
+            text-align: center;
+            padding: 2rem;
+        }
+        .checkout-form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        .checkout-form input {
+            padding: 0.75rem;
+            border-radius: 8px;
+            border: 1px solid var(--color-border);
+            background: rgba(255,255,255,0.05);
+            color: white;
+        }
+    </style>
+
+    <script src="/js/mobile-menu.js"></script>
+    <script src="/js/toast-notifications.js"></script>
+    <script src="/js/search.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/particles.js?v=nebula"></script>
+    <script src="/js/animations.js"></script>
+    <script src="/js/cart.js"></script>
+</body>
+</html>

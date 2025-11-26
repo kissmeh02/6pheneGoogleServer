@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | 6phene</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/overrides.css?v=pro_dark">
+    <link rel="stylesheet" href="/css/animations.css?v=1.0">
+    <link rel="stylesheet" href="/css/performance.css?v=1.0">
+</head>
+<body>
+    <div id="canvas-container"></div>
+    
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">6<span>phene</span></a>
+            <div class="nav-links">
+                <a href="products.html">Products</a>
+                <a href="technology.html">Technology</a>
+                <a href="index.html#solutions">Solutions</a>
+                <a href="index.html#about">About Us</a>
+                <a href="contact.html" style="color: var(--color-primary);">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="cart-btn" onclick="document.getElementById('cartModal').classList.add('open')" title="Shopping Cart">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span id="cart-count" class="cart-badge">0</span>
+                </a>
+                <a href="login.html" class="account-link">My Account</a>
+            </div>
+        </div>
+    </nav>
+
+    <main style="padding-top: 120px; padding-bottom: 5rem;">
+        <div class="container">
+            <div class="text-center fade-in">
+                <h1 style="margin-bottom: 1rem;">Get in Touch</h1>
+                <p style="color: var(--color-text-secondary); max-width: 600px; margin: 0 auto 4rem;">
+                    Ready to revolutionize your industry with graphene? Our team of engineers in Guelph is ready to discuss your unique requirements.
+                </p>
+            </div>
+
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; align-items: start;">
+                
+                <!-- Contact Information -->
+                <div class="fade-in">
+                    <h2 style="margin-bottom: 2rem; font-size: 1.5rem;">Contact Information</h2>
+                    
+                    <div class="feature-card" style="margin-bottom: 2rem; padding: 2rem;">
+                        <h3 style="font-size: 1.25rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="color: var(--color-primary);">📍</span> Headquarters
+                        </h3>
+                        <p style="color: var(--color-text-primary); margin-bottom: 0.5rem;">
+                            <strong>6phene Inc.</strong><br>
+                            123 Graphene Valley<br>
+                            Guelph, Ontario<br>
+                            Canada, N1G 2W1
+                        </p>
+                    </div>
+
+                    <div class="feature-card" style="margin-bottom: 2rem; padding: 2rem;">
+                        <h3 style="font-size: 1.25rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="color: var(--color-primary);">📧</span> Email & Phone
+                        </h3>
+                        <p style="margin-bottom: 0.5rem;">
+                            <span style="color: var(--color-text-secondary);">General Inquiries:</span><br>
+                            <a href="mailto:info@6phene.com" style="color: var(--color-text-primary); font-weight: 500;">info@6phene.com</a>
+                        </p>
+                        <p>
+                            <span style="color: var(--color-text-secondary);">Sales Department:</span><br>
+                            <a href="tel:+15195550123" style="color: var(--color-text-primary); font-weight: 500;">+1 (519) 555-0123</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="feature-card fade-in" style="padding: 2.5rem;">
+                    <h2 style="margin-bottom: 1.5rem; font-size: 1.5rem;">Send a Message</h2>
+                    <form id="contactForm">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                            <div>
+                                <label for="firstName" style="display: block; margin-bottom: 0.5rem; font-size: 0.875rem; font-weight: 500;">First Name</label>
+                                <input type="text" id="firstName" required style="width: 100%; padding: 0.75rem; background: rgba(0,0,0,0.3); border: 1px solid var(--color-border); border-radius: var(--border-radius-sm); color: white; outline: none;">
+                            </div>
+                            <div>
+                                <label for="lastName" style="display: block; margin-bottom: 0.5rem; font-size: 0.875rem; font-weight: 500;">Last Name</label>
+                                <input type="text" id="lastName" required style="width: 100%; padding: 0.75rem; background: rgba(0,0,0,0.3); border: 1px solid var(--color-border); border-radius: var(--border-radius-sm); color: white; outline: none;">
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 1.5rem;">
+                            <label for="email" style="display: block; margin-bottom: 0.5rem; font-size: 0.875rem; font-weight: 500;">Work Email</label>
+                            <input type="email" id="email" required style="width: 100%; padding: 0.75rem; background: rgba(0,0,0,0.3); border: 1px solid var(--color-border); border-radius: var(--border-radius-sm); color: white; outline: none;">
+                        </div>
+
+                        <div style="margin-bottom: 1.5rem;">
+                            <label for="company" style="display: block; margin-bottom: 0.5rem; font-size: 0.875rem; font-weight: 500;">Company / Organization</label>
+                            <input type="text" id="company" style="width: 100%; padding: 0.75rem; background: rgba(0,0,0,0.3); border: 1px solid var(--color-border); border-radius: var(--border-radius-sm); color: white; outline: none;">
+                        </div>
+
+                        <div style="margin-bottom: 2rem;">
+                            <label for="message" style="display: block; margin-bottom: 0.5rem; font-size: 0.875rem; font-weight: 500;">How can we help?</label>
+                            <textarea id="message" rows="5" required style="width: 100%; padding: 0.75rem; background: rgba(0,0,0,0.3); border: 1px solid var(--color-border); border-radius: var(--border-radius-sm); color: white; outline: none; resize: vertical;"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                        
+                        <p id="formSuccess" style="color: var(--color-success); margin-top: 1rem; text-align: center; opacity: 0; transition: opacity 0.3s;">
+                            Message sent successfully! We'll be in touch shortly.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="font-size: 1.5rem; margin-bottom: 1rem;">6<span>phene</span></a>
+                    <p style="color: var(--color-text-secondary); line-height: 1.6;">
+                        Advanced Graphene Nanotechnology.<br>
+                        Pioneering the material revolution.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#careers">Careers</a></li>
+                        <li><a href="contact.html" style="color: var(--color-primary);">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Solutions</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#solutions">Ballistics</a></li>
+                        <li><a href="index.html#solutions">Energy</a></li>
+                        <li><a href="index.html#solutions">Infrastructure</a></li>
+                    </ul>
+                </div>
+                <div class="copyright">
+                    &copy; 2025 6phene Inc. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/particles.js?v=nebula"></script>
+    <script>
+        // Simple Form Handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button');
+            const originalText = btn.innerText;
+            
+            btn.innerText = 'Sending...';
+            btn.style.opacity = '0.7';
+            btn.disabled = true;
+
+            // Simulate API call
+            setTimeout(() => {
+                btn.innerText = 'Sent!';
+                btn.style.background = 'var(--color-success)';
+                document.getElementById('formSuccess').style.opacity = '1';
+                
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.style.background = '';
+                    btn.style.opacity = '1';
+                    btn.disabled = false;
+                    this.reset();
+                    setTimeout(() => {
+                         document.getElementById('formSuccess').style.opacity = '0';
+                    }, 3000);
+                }, 2000);
+            }, 1500);
+        });
+    </script>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="cart-modal">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <h2>Your Cart</h2>
+            <button onclick="document.getElementById('cartModal').classList.remove('open')" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer;">×</button>
+        </div>
+        
+        <div id="cart-items-container" style="flex: 1; overflow-y: auto;">
+            <p class="empty-cart">Your cart is empty.</p>
+        </div>
+        
+        <div style="border-top: 1px solid var(--color-border); padding-top: 1rem; margin-top: 1rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 1rem; font-size: 1.2rem; font-weight: bold;">
+                <span>Total:</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            
+            <form id="checkoutForm" class="checkout-form" onsubmit="event.preventDefault(); window.cart.checkout({
+                name: this.customerName.value,
+                email: this.customerEmail.value,
+                address: this.shippingAddress.value
+            })">
+                <input type="text" name="customerName" placeholder="Full Name" required>
+                <input type="email" name="customerEmail" placeholder="Email Address" required>
+                <input type="text" name="shippingAddress" placeholder="Shipping Address" required>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Place Order</button>
+            </form>
+        </div>
+    </div>
+
+    <style>
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .cart-btn {
+            position: relative;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .cart-btn:hover {
+            color: var(--color-primary);
+            background: rgba(56, 189, 248, 0.1);
+        }
+        .cart-badge {
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            background: var(--color-primary);
+            color: black;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            font-size: 11px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        .account-link {
+            font-size: 0.9rem;
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            position: relative;
+            padding-bottom: 2px;
+            transition: all 0.3s;
+        }
+        .account-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: var(--color-primary);
+            box-shadow: 0 0 4px var(--color-primary);
+        }
+        .account-link:hover {
+            color: var(--color-primary);
+        }
+        .cart-modal {
+            position: fixed;
+            top: 0; right: 0;
+            width: 100%; max-width: 400px;
+            height: 100vh;
+            background: var(--color-bg-card);
+            border-left: 1px solid var(--color-border);
+            z-index: 999;
+            padding: 2rem;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .cart-modal.open { transform: translateX(0); }
+        .empty-cart {
+            color: var(--color-text-secondary);
+            text-align: center;
+            padding: 2rem;
+        }
+        .checkout-form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        .checkout-form input {
+            padding: 0.75rem;
+            border-radius: 8px;
+            border: 1px solid var(--color-border);
+            background: rgba(255,255,255,0.05);
+            color: white;
+        }
+    </style>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/particles.js?v=nebula"></script>
+    <script src="/js/animations.js"></script>
+    <script src="/js/cart.js"></script>
+</body>
+</html>
+

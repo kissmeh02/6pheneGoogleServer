@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Login | 6phene</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/overrides.css?v=pro_dark">
+    <script>
+        // Immediate Error Logging
+        window.onerror = function(msg, url, line, col, error) {
+            const log = document.getElementById('debug-log');
+            if (log) {
+                log.style.display = 'block';
+                log.innerHTML += `<div>[ERROR] ${msg} at ${url}:${line}:${col}</div>`;
+            }
+            console.error("Global Error:", msg, url, line, error);
+            // Force body visible in case CSS hid it
+            document.body.style.visibility = 'visible';
+            document.body.style.opacity = '1';
+        };
+        
+        console.log('Login page initializing...');
+    </script>
+    <style>
+        /* Debug Log Styles */
+        #debug-log {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            background: rgba(0,0,0,0.9);
+            color: #0f0;
+            font-family: monospace;
+            padding: 1rem;
+            overflow-y: auto;
+            z-index: 9999;
+            border-top: 2px solid #0f0;
+        }
+        
+        body {
+            overflow: hidden; /* Focus on the login form */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            visibility: visible; /* Ensure visibility */
+            opacity: 1;
+        }
+
+        .login-section {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: var(--spacing-md);
+        }
+
+        .login-card {
+            background: var(--color-bg-card);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--color-border);
+            padding: 3rem 2.5rem;
+            border-radius: var(--border-radius-lg);
+            width: 100%;
+            max-width: 400px;
+            box-shadow: var(--shadow-lg), var(--shadow-glow);
+            animation: fadeUp 0.6s ease-out forwards;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .login-header h1 {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--color-text-secondary);
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--color-border);
+            border-radius: var(--border-radius-md);
+            color: var(--color-text-primary);
+            font-family: var(--font-family-sans);
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2);
+        }
+
+        .error-message {
+            color: #ef4444;
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+            text-align: center;
+            min-height: 1.25rem;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 1.5rem;
+            color: var(--color-text-muted);
+            font-size: 0.875rem;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--color-primary);
+        }
+    </style>
+</head>
+<body>
+    <div id="canvas-container"></div>
+    <nav class="navbar" style="position: absolute; background: transparent; border: none;">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">6<span>phene</span></a>
+        </div>
+    </nav>
+
+    <main class="login-section">
+        <div id="debug-log"><strong>Debug Log:</strong><br></div>
+        <div class="login-card">
+            <div class="login-header">
+                <h1>Client Portal</h1>
+                <p style="color: var(--color-text-secondary);">Access your dashboard</p>
+            </div>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" id="username" class="form-input" placeholder="Enter your ID" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" class="form-input" placeholder="••••••••" required>
+                </div>
+
+                <div id="errorMessage" class="error-message">Invalid credentials</div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+                    Secure Login
+                </button>
+            </form>
+
+            <a href="reset-password.html" class="back-link" style="margin-top: 1rem; color: var(--color-primary);">Forgot Password?</a>
+            <a href="index.html" class="back-link">← Back to Website</a>
+        </div>
+    </main>
+
+    <script src="/js/particles.js?v=nebula"></script>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const user = document.getElementById('username').value;
+            const pass = document.getElementById('password').value;
+            const errorMsg = document.getElementById('errorMessage');
+
+            // Admin Login
+            if (user === 'kissmehrass' && pass === '1234') {
+                const btn = e.target.querySelector('button');
+                btn.textContent = 'Authenticating...';
+                btn.style.opacity = '0.8';
+                
+                // Store session
+                sessionStorage.setItem('userRole', 'admin');
+                sessionStorage.setItem('username', user);
+                
+                setTimeout(() => {
+                    window.location.href = '/invoice/';
+                }, 800);
+            } 
+            // Customer Login
+            else if (user === 'admin' && pass === '1234') {
+                const btn = e.target.querySelector('button');
+                btn.textContent = 'Authenticating...';
+                btn.style.opacity = '0.8';
+                
+                // Store session
+                sessionStorage.setItem('userRole', 'customer');
+                sessionStorage.setItem('username', user);
+                
+                setTimeout(() => {
+                    window.location.href = '/customer-portal.html';
+                }, 800);
+            }
+            else {
+                // Error
+                errorMsg.style.opacity = '1';
+                document.getElementById('password').value = '';
+                
+                // Shake animation
+                const card = document.querySelector('.login-card');
+                card.style.animation = 'none';
+                card.offsetHeight; /* trigger reflow */
+                card.style.animation = 'shake 0.5s';
+            }
+        });
+
+        // Add shake keyframes dynamically
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes shake {
+                0%, 100% { transform: translateX(0); }
+                10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+                20%, 40%, 60%, 80% { transform: translateX(5px); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
+

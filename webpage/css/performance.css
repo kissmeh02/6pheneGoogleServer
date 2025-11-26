@@ -1,0 +1,65 @@
+/* Performance Optimizations */
+
+/* GPU Acceleration */
+.product-card,
+.feature-card,
+.btn,
+.navbar {
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+/* Image Optimization */
+img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
+}
+
+/* Reduce Motion for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Content Visibility for Performance */
+.product-grid > * {
+    content-visibility: auto;
+    contain-intrinsic-size: 400px;
+}
+
+/* Font Display Optimization */
+@font-face {
+    font-family: 'Inter';
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    font-display: swap;
+}
+
+
+
+
+
+
+
+
+
+
+
+

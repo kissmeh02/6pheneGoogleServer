@@ -1,0 +1,64 @@
+:root {
+    /* Colors - "Pro Material" Theme (Apple-inspired) */
+    
+    /* Backgrounds: Premium Dark */
+    --color-bg-main: #030304; /* Deepest Obsidian (Almost Black, slight cool tone) */
+    --color-bg-secondary: #0a0a0c; /* Slight step up for contrast */
+    --color-bg-card: rgba(20, 20, 25, 0.7); /* Darker glass */
+    
+    /* Text: Crisp & Legible */
+    --color-text-primary: #f5f5f7; /* Off-White (Apple standard) */
+    --color-text-secondary: #86868b; /* Cool Gray */
+    --color-text-accent: #2997ff; /* Apple Blue / Tech Cyan blend */
+    --color-text-muted: #6e6e73;
+
+    /* Brand Colors - Sharp & Technical */
+    --color-primary: #38bdf8; /* Bright Cyan (matches hexagons) */
+    --color-primary-glow: rgba(56, 189, 248, 0.4);
+    --color-primary-hover: #0ea5e9; /* Deeper Cyan */
+    
+    /* Secondary/Data Colors */
+    --color-success: #30d158; 
+    --color-warning: #ff9f0a;
+
+    --color-border: rgba(255, 255, 255, 0.12); /* Subtle white border */
+    --color-border-hover: rgba(255, 255, 255, 0.3);
+
+    /* Gradients - Subtle & Atmospheric */
+    --gradient-hero: linear-gradient(180deg, #000000 0%, #121212 100%);
+    --gradient-accent: linear-gradient(90deg, #2997ff, #30d158); /* Blue -> Green (Eco/Tech) */
+    --gradient-glass: linear-gradient(180deg, rgba(44, 44, 46, 0.4) 0%, rgba(28, 28, 30, 0.4) 100%);
+
+    /* Typography */
+    --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-family-mono: 'SF Mono', 'JetBrains Mono', monospace;
+    
+    --font-size-sm: 0.8125rem; /* 13px */
+    --font-size-base: 1.0625rem; /* 17px (Apple Body) */
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.5rem;
+    --font-size-2xl: 2rem;
+    --font-size-3xl: 3rem;
+    --font-size-4xl: 4.5rem; /* Big Impact */
+    --font-size-5xl: 6rem;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2.5rem;
+    --spacing-xl: 5rem;
+    --spacing-2xl: 10rem; /* Generous breathing room */
+
+    /* Borders & Effects */
+    --border-radius-sm: 0.375rem;
+    --border-radius-md: 0.75rem;
+    --border-radius-lg: 1.25rem; /* Smooth curvature */
+    --border-width: 1px;
+    
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.1);
+    --shadow-lg: 0 20px 40px rgba(0,0,0,0.4);
+    --shadow-glow: 0 0 30px rgba(41, 151, 255, 0.15);
+
+    --transition-base: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
