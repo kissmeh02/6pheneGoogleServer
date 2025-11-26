@@ -1,0 +1,19 @@
+---
+description: General project documentation and workflow rules.
+globs: "**/*"
+---
+
+# General Project Rules
+
+## 1. Documentation
+- **Readability**: All complex algorithms must be commented with "Why", not just "What".
+- **API Docs**: Maintain `OpenAPI` (Swagger) auto-generation annotations.
+- **User Manual**: Update `docs/user_guide.md` when adding user-facing features.
+
+## 2. Git Workflow
+- **Commits**: `type(scope): message` (e.g., `feat(auth): implement argon2 hashing`).
+- **Clean Working Tree**: Ensure no debugging print statements are committed.
+
+## 3. Environment
+- **Secrets**: Load API keys/Secrets from `.env` file.
+- **Config**: Configuration variables (Ports, Paths) in `config.py` using `pydantic-settings`.

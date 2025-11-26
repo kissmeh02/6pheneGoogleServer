@@ -1,0 +1,33 @@
+---
+description: Backend development rules using Python and FastAPI.
+globs: "backend/**/*.py"
+---
+
+# Backend Development Rules (Python/FastAPI)
+
+## 1. Architecture & Structure
+- **Framework**: Use `FastAPI` for the REST API.
+- **Async**: Use `async/await` for all I/O bound operations (Database, File System).
+- **Typing**: Strictly enforce Python type hints. Use `mypy` compatible types.
+    - Use `pydantic` models for Data Transfer Objects (DTOs).
+    - Return types must be explicitly declared.
+- **Dependency Injection**: Use FastAPI's `Depends()` for services and database sessions.
+
+## 2. Code Style
+- **PEP 8**: Strictly follow PEP 8.
+- **Docstrings**: Use Google-style docstrings for all endpoints and complex logic.
+- **Variable Naming**: Snake_case for variables/functions, PascalCase for Classes.
+
+## 3. Error Handling
+- Never return raw 500 errors. Catch exceptions and raise `HTTPException`.
+- Use a centralized error handler for common exceptions.
+
+## 4. API Design
+- **RESTful**: Follow standard REST patterns (`GET /resource`, `POST /resource`, `PATCH /resource/{id}`).
+- **Status Codes**:
+    - 200: OK
+    - 201: Created
+    - 400: Bad Request (Validation Error)
+    - 401: Unauthorized
+    - 403: Forbidden
+    - 404: Not Found

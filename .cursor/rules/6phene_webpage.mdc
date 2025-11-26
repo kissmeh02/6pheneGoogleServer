@@ -1,0 +1,39 @@
+---
+description: "Guidelines for the 6phene static website and its coexistence with the Modern Invoice System."
+globs: ["webpage/**", "modern-invoice-system/**", "nginx*.conf"]
+---
+
+# 6phene Website Project Rules
+
+## Project Overview
+The **6phene** website is a B2B informative site for a graphene nanotechnology company. It is a static site built with HTML5, CSS3 (Custom Design System), and served via Nginx.
+
+## Coexistence Strategy (CRITICAL)
+This project shares a server and workspace with the **Modern Invoice System**.
+1.  **Parallel Execution**: 
+    -   The Invoice System runs as a separate application (likely Python/Node).
+    -   The 6phene website is served as static files via Nginx on Port 80.
+2.  **Isolation**:
+    -   NEVER modify the `modern-invoice-system/` directory when working on `webpage/`.
+    -   NEVER change the root Nginx configuration in a way that would block the Invoice System's ports or paths.
+    -   The 6phene site is currently configured to be served from `/root/Main/webpage`.
+3.  **Nginx Configuration**:
+    -   The 6phene config is located in `/etc/nginx/sites-available/6phene`.
+    -   It listens on Port 80 (Public HTTP).
+    -   It is set up to serve the site at the root `/` (for `34.45.45.95`) AND as an alias at `/webpage/`.
+
+## Tech Stack (Alpha V1)
+-   **Frontend**: Vanilla HTML5, CSS3 (Variables, No Preprocessors).
+-   **Design System**: Dark mode ("Slate"), Inter Font, Cyan Accent (`#38bdf8`).
+-   **Responsiveness**: Mobile-first approach using `responsive.css` and `components.css`.
+-   **Server**: Nginx (Ubuntu).
+
+## Key Locations
+-   **Web Root**: `/root/Main/webpage`
+-   **Assets**: `/root/Main/webpage/assets`
+-   **CSS**: `/root/Main/webpage/css` (base, components, responsive, variables)
+-   **Nginx Config**: `/etc/nginx/sites-available/6phene`
+
+## Debugging
+-   The `index.html` contains a script that logs clicks and resize events to the browser console for debugging responsiveness and interactions.
+-   Use `curl -I http://localhost/` to verify local server status.

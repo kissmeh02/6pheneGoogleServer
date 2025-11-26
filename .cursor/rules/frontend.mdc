@@ -1,0 +1,32 @@
+---
+description: Frontend development rules using React and Tailwind CSS.
+globs: "frontend/**/*.{js,jsx,ts,tsx,css}"
+---
+
+# Frontend Development Rules (React/Vite)
+
+## 1. Architecture
+- **Framework**: React (with Vite).
+- **Language**: TypeScript (preferred) or clean JavaScript (ES6+).
+- **Styling**: `Tailwind CSS` exclusively. Avoid custom CSS files unless for global resets.
+
+## 2. Components
+- **Functional**: Use Functional Components with Hooks. Avoid Class Components.
+- **Atomic Design**: Structure components into:
+    - `ui/`: Basic atoms (Buttons, Inputs).
+    - `components/`: Logical groups (Forms, Tables).
+    - `pages/`: Full page views.
+- **Props**: Explicitly define prop types (using PropTypes or TypeScript interfaces).
+
+## 3. State Management
+- Use `React Query` (TanStack Query) for Server State (API fetching).
+- Use `Context API` or `Zustand` for Global App State (Theme, User Session).
+- Avoid `Redux` unless complexity demands it (Keep It Simple).
+
+## 4. Code Style
+- **Naming**: PascalCase for Components (`InvoiceTable.jsx`), camelCase for functions/variables.
+- **Imports**: Group imports: External (React, Libs) -> Internal (Components) -> Styles.
+
+## 5. Performance
+- Lazy load routes using `React.lazy`.
+- Memoize expensive calculations with `useMemo` and callbacks with `useCallback`.

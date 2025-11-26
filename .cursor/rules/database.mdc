@@ -1,0 +1,34 @@
+---
+description: Database design, schema, and security rules for SQLite.
+globs: "**/*.{sql,db,py}"
+---
+
+# Database & Security Rules
+
+## 1. Database Schema (SQLite)
+- **ORM**: Use `SQLModel` (Combines Pydantic + SQLAlchemy) for Python.
+- **Normalization**: Ensure 3NF (Third Normal Form) where possible.
+- **Relationships**: Explicitly define Foreign Keys.
+- **Migrations**: Use `Alembic` for all schema changes. Never modify the DB file manually in production.
+
+## 2. Data Integrity
+- **Soft Deletes**: Use a `is_deleted` boolean column for critical data (Invoices, Customers) instead of permanent `DELETE`.
+- **Constraints**: Enforce `NOT NULL`, `UNIQUE`, and `CHECK` constraints at the database level.
+- **Money**: Store monetary values as `Integer` (cents) or `Decimal` (fixed precision). NEVER `Float`.
+
+## 3. Security & Auth (CRITICAL)
+- **Password Storage**:
+    - **Algorithm**: Argon2id (Current Industry Standard).
+    - **Hashing**: Never store plain-text passwords.
+    - **Salting**: Automatic salting is required.
+- **Policy**:
+    - Minimum 12 characters.
+    - Complexity checks (Symbol, Number, Mixed Case).
+    - No default passwords (e.g., `admin/admin`). Force password change on first login.
+- **Protection**:
+    - **Injection**: ALWAYS use parameterized queries (handled by SQLModel/ORM).
+    - **File Permissions**: The `invoices.db` file must be readable only by the application user (chmod 600).
+
+## 4. Backup & Recovery
+- **Automated**: Trigger backup on application exit or user request.
+- **Versioning**: Keep last 5 backups (`invoice_backup_TIMESTAMP.db`).
