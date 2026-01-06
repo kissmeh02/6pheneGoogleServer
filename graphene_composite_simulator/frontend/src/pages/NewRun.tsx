@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 import { useNavigate } from 'react-router-dom'
-import { Calculator, Save } from 'lucide-react'
+import { Calculator } from 'lucide-react'
 import api from '../services/api'
 
 const NewRun = () => {
@@ -33,11 +33,12 @@ const NewRun = () => {
 
   const createRunMutation = useMutation({
     mutationFn: (data: any) => api.post('/api/runs', data),
-    onSuccess: async (run) => {
+    onSuccess: async (response) => {
       // Calculate predictions
-      await api.post(`/api/predictions/calculate/${run.id}`)
+      const runId = response.data.id
+      await api.post(`/api/predictions/calculate/${runId}`)
       queryClient.invalidateQueries({ queryKey: ['runs'] })
-      navigate(`/results/${run.id}`)
+      navigate(`/results/${runId}`)
     }
   })
 
@@ -129,7 +130,7 @@ const NewRun = () => {
                 max="10"
                 step="0.1"
                 value={newRun.graphene_wt_pct}
-                onChange={(e) => setNewRun({ ...newRun, graphene_wt_pct: e.target.value })}
+                onChange={(e) => setNewRun({ ...newRun, graphene_wt_pct: parseFloat(e.target.value) })}
                 className="w-full"
               />
             </div>
@@ -144,7 +145,7 @@ const NewRun = () => {
                 max="1"
                 step="0.01"
                 value={newRun.dispersion_quality}
-                onChange={(e) => setNewRun({ ...newRun, dispersion_quality: e.target.value })}
+                onChange={(e) => setNewRun({ ...newRun, dispersion_quality: parseFloat(e.target.value) })}
                 className="w-full"
               />
             </div>
@@ -159,7 +160,7 @@ const NewRun = () => {
                 max="1"
                 step="0.01"
                 value={newRun.bonding_score}
-                onChange={(e) => setNewRun({ ...newRun, bonding_score: e.target.value })}
+                onChange={(e) => setNewRun({ ...newRun, bonding_score: parseFloat(e.target.value) })}
                 className="w-full"
               />
             </div>
@@ -174,7 +175,7 @@ const NewRun = () => {
                 max="0.1"
                 step="0.001"
                 value={newRun.void_fraction}
-                onChange={(e) => setNewRun({ ...newRun, void_fraction: e.target.value })}
+                onChange={(e) => setNewRun({ ...newRun, void_fraction: parseFloat(e.target.value) })}
                 className="w-full"
               />
             </div>
@@ -219,6 +220,8 @@ const NewRun = () => {
 }
 
 export default NewRun
+
+
 
 
 

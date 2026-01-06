@@ -6,7 +6,6 @@ import api from '../services/api'
 const MaterialsCatalog = () => {
   const queryClient = useQueryClient()
   const [isAdding, setIsAdding] = useState(false)
-  const [editingId, setEditingId] = useState<number | null>(null)
   const [newMaterial, setNewMaterial] = useState<any>({
     name: '',
     type: 'fiber',
@@ -212,6 +211,8 @@ const MaterialsCatalog = () => {
 }
 
 export default MaterialsCatalog
+
+
 
 
 

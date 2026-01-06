@@ -79,7 +79,14 @@ class MaterialBase(SQLModel):
 class Material(MaterialBase, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)
     created_at: datetime = Field(default_factory=datetime.now)
-    composite_runs: List["CompositeRun"] = Relationship(back_populates="base_material")
+    composite_runs_as_base: List["CompositeRun"] = Relationship(
+        back_populates="base_material",
+        sa_relationship_kwargs={"foreign_keys": "CompositeRun.base_material_id"}
+    )
+    composite_runs_as_matrix: List["CompositeRun"] = Relationship(
+        back_populates="matrix_material",
+        sa_relationship_kwargs={"foreign_keys": "CompositeRun.matrix_material_id"}
+    )
 
 
 # Graphene Specs
@@ -123,7 +130,14 @@ class CompositeRunBase(SQLModel):
 class CompositeRun(CompositeRunBase, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)
     created_at: datetime = Field(default_factory=datetime.now)
-    base_material: Optional[Material] = Relationship(back_populates="composite_runs")
+    base_material: Optional[Material] = Relationship(
+        back_populates="composite_runs_as_base",
+        sa_relationship_kwargs={"foreign_keys": "[CompositeRun.base_material_id]"}
+    )
+    matrix_material: Optional[Material] = Relationship(
+        back_populates="composite_runs_as_matrix",
+        sa_relationship_kwargs={"foreign_keys": "[CompositeRun.matrix_material_id]"}
+    )
     graphene_spec: Optional[GrapheneSpec] = Relationship(back_populates="composite_runs")
     predictions: List["Prediction"] = Relationship(back_populates="run")
 
@@ -158,6 +172,7 @@ class Formula(FormulaBase, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)
     created_at: datetime = Field(default_factory=datetime.now)
     updated_at: datetime = Field(default_factory=datetime.now)
+
 
 
 

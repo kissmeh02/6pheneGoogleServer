@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Home, Database, Calculator, BarChart3, Settings } from 'lucide-react'
+import { Home, Database, Calculator, Settings } from 'lucide-react'
 
 interface LayoutProps {
   children: ReactNode
@@ -56,6 +56,8 @@ const Layout = ({ children }: LayoutProps) => {
 }
 
 export default Layout
+
+
 
 
 
