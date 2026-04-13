@@ -97,6 +97,13 @@ logs/
 *.key
 secrets/
 
+# Allow env config directory (overrides env/ rule in Virtual Environments)
+!env/
+env/.env
+!env/.env.example
+!env/load-env.sh
+!env/setup-server-env.sh
+
 # =============================================================================
 # Testing & Coverage
 # =============================================================================
