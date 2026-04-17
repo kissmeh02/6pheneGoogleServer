@@ -76,6 +76,14 @@
     font-size: 1.5rem;
 }
 
+.mobile-nav-header .logo-wordmark {
+    height: 34px;
+}
+
+.mobile-nav-header .logo-icon {
+    height: 34px;
+}
+
 .mobile-nav-close {
     background: transparent;
     border: none;
@@ -136,7 +144,7 @@
 }
 
 /* Touch-friendly buttons */
-.btn, .cart-btn, .account-link {
+.btn, .account-link {
     min-height: 44px;
     min-width: 44px;
     touch-action: manipulation;
@@ -211,6 +219,14 @@
 
     .logo {
         font-size: 1.5rem;
+    }
+
+    .logo-wordmark {
+        height: 34px;
+    }
+
+    .logo-icon {
+        height: 34px;
     }
 
     /* Hero Section */
@@ -381,7 +397,6 @@
     .mobile-menu-toggle,
     .mobile-nav,
     .mobile-menu-overlay,
-    .cart-btn,
     .nav-actions {
         display: none;
     }

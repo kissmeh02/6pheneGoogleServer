@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 320" role="img" aria-label="6PHENE INC nanotechnologies">
+  <g>
+    <text
+      x="26"
+      y="150"
+      font-family="Inter, 'Segoe UI', Arial, sans-serif"
+      font-size="138"
+      font-weight="900"
+      letter-spacing="-0.2"
+      fill="#50b8b0"
+      stroke="#ffffff"
+      stroke-width="0.6"
+      paint-order="stroke fill"
+    >
+      6PHENE INC
+    </text>
+
+    <text
+      x="28"
+      y="250"
+      font-family="Inter, 'Segoe UI', Arial, sans-serif"
+      font-size="86"
+      font-weight="500"
+      letter-spacing="-0.1"
+      fill="#50b8b0"
+      stroke="#ffffff"
+      stroke-width="0.4"
+      paint-order="stroke fill"
+    >
+      Nanotechnologies
+    </text>
+  </g>
+</svg>

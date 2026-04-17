@@ -4,6 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Technology | 6phene</title>
+    <meta name="description" content="Discover 6phene's graphene technology stack, synthesis methods, and quality control approach.">
+    <meta name="theme-color" content="#50b8b0">
+    <link rel="canonical" href="https://6phene.com/technology.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Technology | 6phene">
+    <meta property="og:description" content="Discover 6phene's graphene technology stack, synthesis methods, and quality control approach.">
+    <meta property="og:image" content="/assets/android-chrome-512x512.png">
+    <meta property="og:url" content="https://6phene.com/technology.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Technology | 6phene">
+    <meta name="twitter:description" content="Discover 6phene's graphene technology stack, synthesis methods, and quality control approach.">
+    <meta name="twitter:image" content="/assets/android-chrome-512x512.png">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
@@ -20,7 +37,7 @@
     <div id="canvas-container"></div>
     <nav class="navbar">
         <div class="container nav-content">
-            <a href="index.html" class="logo">6<span>phene</span></a>
+            <a href="index.html" class="logo"><img src="assets/logo-icon.png" alt="" class="logo-icon" aria-hidden="true" width="220" height="220" loading="eager" decoding="async"><img src="assets/logo-wordmark.svg" alt="6PHENE INC Nanotechnologies" class="logo-wordmark" width="1400" height="320" loading="eager" decoding="async"></a>
             <div class="nav-links">
                 <a href="products.html">Products</a>
                 <a href="technology.html" style="color: var(--color-primary);">Technology</a>
@@ -29,14 +46,6 @@
                 <a href="contact.html">Contact</a>
             </div>
             <div class="nav-actions">
-                <a href="#" class="cart-btn" onclick="document.getElementById('cartModal').classList.add('open')" title="Shopping Cart">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="9" cy="21" r="1"></circle>
-                        <circle cx="20" cy="21" r="1"></circle>
-                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                    </svg>
-                    <span id="cart-count" class="cart-badge">0</span>
-                </a>
                 <a href="login.html" class="account-link">My Account</a>
             </div>
         </div>
@@ -74,7 +83,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
-                    <a href="index.html" class="logo" style="font-size: 1.5rem; margin-bottom: 1rem;">6<span>phene</span></a>
+                    <a href="index.html" class="logo footer-brand-logo"><img src="assets/logo-icon.png" alt="" class="logo-icon" aria-hidden="true" width="220" height="220" loading="eager" decoding="async"><img src="assets/logo-wordmark.svg" alt="6PHENE INC Nanotechnologies" class="logo-wordmark" width="1400" height="320" loading="eager" decoding="async"></a>
                     <p style="color: var(--color-text-secondary); line-height: 1.6;">
                         Advanced Graphene Nanotechnology.
                     </p>
@@ -95,6 +104,13 @@
                         <li><a href="index.html#solutions">Infrastructure</a></li>
                     </ul>
                 </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    </ul>
+                </div>
                 <div class="copyright">
                     &copy; 2025 6phene Inc. All rights reserved.
                 </div>
@@ -102,72 +118,12 @@
         </div>
     </footer>
 
-    <!-- Cart Modal -->
-    <div id="cartModal" class="cart-modal">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-            <h2>Your Cart</h2>
-            <button onclick="document.getElementById('cartModal').classList.remove('open')" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer;">×</button>
-        </div>
-        
-        <div id="cart-items-container" style="flex: 1; overflow-y: auto;">
-            <p class="empty-cart">Your cart is empty.</p>
-        </div>
-        
-        <div style="border-top: 1px solid var(--color-border); padding-top: 1rem; margin-top: 1rem;">
-            <div style="display: flex; justify-content: space-between; margin-bottom: 1rem; font-size: 1.2rem; font-weight: bold;">
-                <span>Total:</span>
-                <span id="cart-total">$0.00</span>
-            </div>
-            
-            <form id="checkoutForm" class="checkout-form" onsubmit="event.preventDefault(); window.cart.checkout({
-                name: this.customerName.value,
-                email: this.customerEmail.value,
-                address: this.shippingAddress.value
-            })">
-                <input type="text" name="customerName" placeholder="Full Name" required>
-                <input type="email" name="customerEmail" placeholder="Email Address" required>
-                <input type="text" name="shippingAddress" placeholder="Shipping Address" required>
-                
-                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Place Order</button>
-            </form>
-        </div>
-    </div>
 
     <style>
         .nav-actions {
             display: flex;
             align-items: center;
             gap: 1.5rem;
-        }
-        .cart-btn {
-            position: relative;
-            padding: 0.5rem;
-            border-radius: 0.5rem;
-            color: var(--color-text-secondary);
-            text-decoration: none;
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .cart-btn:hover {
-            color: var(--color-primary);
-            background: rgba(56, 189, 248, 0.1);
-        }
-        .cart-badge {
-            position: absolute;
-            top: -4px;
-            right: -4px;
-            background: var(--color-primary);
-            color: black;
-            border-radius: 50%;
-            width: 18px;
-            height: 18px;
-            font-size: 11px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
         }
         .account-link {
             font-size: 0.9rem;
@@ -190,44 +146,11 @@
         .account-link:hover {
             color: var(--color-primary);
         }
-        .cart-modal {
-            position: fixed;
-            top: 0; right: 0;
-            width: 100%; max-width: 400px;
-            height: 100vh;
-            background: var(--color-bg-card);
-            border-left: 1px solid var(--color-border);
-            z-index: 999;
-            padding: 2rem;
-            transform: translateX(100%);
-            transition: transform 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-        .cart-modal.open { transform: translateX(0); }
-        .empty-cart {
-            color: var(--color-text-secondary);
-            text-align: center;
-            padding: 2rem;
-        }
-        .checkout-form {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-        }
-        .checkout-form input {
-            padding: 0.75rem;
-            border-radius: 8px;
-            border: 1px solid var(--color-border);
-            background: rgba(255,255,255,0.05);
-            color: white;
-        }
     </style>
 
     <script src="/js/main.js"></script>
     <script src="/js/particles.js?v=nebula"></script>
     <script src="/js/animations.js"></script>
-    <script src="/js/cart.js"></script>
 </body>
 </html>
 

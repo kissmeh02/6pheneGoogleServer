@@ -126,15 +126,8 @@
                         ${product.sku ? `<div class="spec-item"><span>SKU</span> <span>${product.sku}</span></div>` : ''}
                     </div>
                     
-                    <div style="display: flex; gap: 1rem;">
-                        <button 
-                            onclick='window.cart.addItem(${JSON.stringify({id: product.id, name: product.name, price: product.price})})' 
-                            class="btn btn-outline" 
-                            style="flex: 1; font-size: 0.85rem;"
-                            ${product.stock_quantity <= 0 ? 'disabled' : ''}>
-                            ${product.stock_quantity > 0 ? 'Add to Cart' : 'Out of Stock'}
-                        </button>
-                        <a href="contact.html?product=${encodeURIComponent(product.name)}" class="btn btn-primary" style="flex: 1; font-size: 0.85rem;">Inquire</a>
+                    <div style="display: flex;">
+                        <a href="contact.html?product=${encodeURIComponent(product.name)}" class="btn btn-primary" style="flex: 1; font-size: 0.85rem; text-align: center;">Inquire</a>
                     </div>
                 </div>
             `;

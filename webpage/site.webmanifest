@@ -1,0 +1,21 @@
+{
+  "name": "6phene Inc",
+  "short_name": "6phene",
+  "description": "Advanced graphene nanotechnology solutions for defense, energy, and industrial applications.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#030304",
+  "theme_color": "#50b8b0",
+  "icons": [
+    {
+      "src": "/assets/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

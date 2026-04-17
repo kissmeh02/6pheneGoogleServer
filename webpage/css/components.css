@@ -79,6 +79,31 @@
     text-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
 }
 
+.logo-wordmark {
+    display: block;
+    width: auto;
+    height: 44px;
+    max-width: min(460px, 70vw);
+}
+
+.logo-icon {
+    display: block;
+    width: auto;
+    height: 44px;
+}
+
+.footer .logo .logo-wordmark {
+    height: 36px;
+}
+
+.footer .logo .logo-icon {
+    height: 36px;
+}
+
+.footer-brand-logo {
+    margin-bottom: 1rem;
+}
+
 .logo span {
     color: var(--color-primary);
 }
