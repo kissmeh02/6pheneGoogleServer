@@ -47,6 +47,9 @@
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
+            .team-grid {
+                grid-template-columns: 1fr !important;
+            }
         }
 
         .info-block {
@@ -109,9 +112,6 @@
                 <a href="about.html" style="color: var(--color-primary);">About Us</a>
                 <a href="contact.html">Contact</a>
             </div>
-            <div class="nav-actions">
-                <a href="login.html" class="account-link">My Account</a>
-            </div>
         </div>
     </nav>
 
@@ -155,18 +155,8 @@
                         </div>
                     </div>
                     
-                    <div class="feature-card" style="height: 100%; min-height: 400px; display: flex; align-items: center; justify-content: center; text-align: center;">
-                        <div>
-                            <div style="width: 80px; height: 80px; margin-bottom: 1rem; color: var(--color-primary);">
-                                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <path d="M12 2v4M12 18v4M2 12h4M18 12h4"></path>
-                                    <path d="M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
-                                </svg>
-                            </div>
-                            <h3>"The Wonder Material"</h3>
-                            <p style="margin-top: 1rem; color: var(--color-text-secondary);">1 Square Meter weighs only 0.77mg <br>but can support 4kg.</p>
-                        </div>
+                    <div class="feature-card" style="height: 100%; min-height: 400px; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 0;">
+                        <img src="assets/lig-process.png" alt="13-station R2R Laser-Induced Graphene production line" style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit;" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -176,23 +166,16 @@
         <section class="section" style="background: rgba(255,255,255,0.02);">
             <div class="container">
                 <div class="story-grid fade-in">
-                    <!-- Reverse order on desktop -->
-                    <div class="feature-card" style="height: 100%; min-height: 400px; display: flex; flex-direction: column; justify-content: center;">
-                        <div class="timeline-item">
-                            <h4 style="margin-bottom: 0.5rem; color: white;">2026: Incorporation</h4>
-                            <p style="font-size: 0.9rem; color: var(--color-text-secondary);">6Phene Graphene Inc. federally incorporated under CBCA, Ontario. R2R LIG pilot line fully engineered with CAD and digital twin.</p>
+                    <!-- Product showcase images -->
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; height: 100%; min-height: 400px;">
+                        <div class="feature-card" style="padding: 0; overflow: hidden;">
+                            <img src="assets/hockey-stick-graphene.png" alt="Graphene-enhanced hockey stick with structural analysis" style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit;" loading="lazy">
                         </div>
-                        <div class="timeline-item">
-                            <h4 style="margin-bottom: 0.5rem; color: white;">2026: Technology Validation</h4>
-                            <p style="font-size: 0.9rem; color: var(--color-text-secondary);">43+ substrate library validated with parameter optimization. EPD prototyping initiated with measurable energy dissipation improvements.</p>
+                        <div class="feature-card" style="padding: 0; overflow: hidden;">
+                            <img src="assets/ballistic-panel.png" alt="6PHENE graphene ballistic panel energy dissipation test" style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit;" loading="lazy">
                         </div>
-                        <div class="timeline-item">
-                            <h4 style="margin-bottom: 0.5rem; color: white;">2026: Supply Chain</h4>
-                            <p style="font-size: 0.9rem; color: var(--color-text-secondary);">Strategic supplier relationships secured with DuPont, Toray, Coherent, Huntsman, Hexion, and Linde for production-grade materials.</p>
-                        </div>
-                        <div class="timeline-item">
-                            <h4 style="margin-bottom: 0.5rem; color: white;">Next: Commercialization</h4>
-                            <p style="font-size: 0.9rem; color: var(--color-text-secondary);">R2R LIG pilot line commissioning, first hockey stick prototype, ballistic panel V50 testing, and NIJ Level III certification.</p>
+                        <div class="feature-card" style="padding: 0; overflow: hidden; grid-column: 1 / -1;">
+                            <img src="assets/graphene-sports.png" alt="Graphene-enhanced sports equipment composite structure" style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit;" loading="lazy">
                         </div>
                     </div>
 
@@ -219,6 +202,31 @@
                                 To eliminate the cost barrier that has kept graphene in the lab. Our proprietary R2R LIG process produces graphene at less than $5 per square meter — a 10-40x cost reduction over traditional CVD methods — making commercial-scale graphene composites finally viable.
                             </p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team -->
+        <section class="section">
+            <div class="container fade-in">
+                <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 3rem;">Our Founders</h2>
+                <div class="team-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; max-width: 800px; margin: 0 auto;">
+                    <div class="feature-card" style="text-align: center; padding: 2.5rem 2rem;">
+                        <div style="width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, var(--color-primary), rgba(56, 189, 248, 0.3)); margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; font-weight: 700; color: white;">KK</div>
+                        <h3 style="margin-bottom: 0.25rem;">Kavan Kissoon</h3>
+                        <p style="color: var(--color-primary); font-size: 0.9rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Chief Executive Officer</p>
+                        <p style="color: var(--color-text-secondary); font-size: 0.9rem; line-height: 1.6;">
+                            Leads corporate strategy, manufacturing engineering, and commercialization. Architected the R2R LIG pilot line and built 6PHENE's supplier network with DuPont, Toray, and Coherent.
+                        </p>
+                    </div>
+                    <div class="feature-card" style="text-align: center; padding: 2.5rem 2rem;">
+                        <div style="width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, var(--color-primary), rgba(56, 189, 248, 0.3)); margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; font-weight: 700; color: white;">SE</div>
+                        <h3 style="margin-bottom: 0.25rem;">Santiago Escobar, M.Sc.</h3>
+                        <p style="color: var(--color-primary); font-size: 0.9rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em;">Chief Technology Officer</p>
+                        <p style="color: var(--color-text-secondary); font-size: 0.9rem; line-height: 1.6;">
+                            Directs materials science R&D and process optimization. Validated 43+ substrate configurations and leads graphene composite development for ballistic and sports applications.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -276,35 +284,6 @@
         </div>
     </footer>
 
-
-    <style>
-        .nav-actions {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-        }
-        .account-link {
-            font-size: 0.9rem;
-            color: var(--color-text-secondary);
-            text-decoration: none;
-            position: relative;
-            padding-bottom: 2px;
-            transition: all 0.3s;
-        }
-        .account-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 1px;
-            background: var(--color-primary);
-            box-shadow: 0 0 4px var(--color-primary);
-        }
-        .account-link:hover {
-            color: var(--color-primary);
-        }
-    </style>
 
     <script src="/js/main.js"></script>
     <script src="/js/particles.js?v=nebula"></script>
