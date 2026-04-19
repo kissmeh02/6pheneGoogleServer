@@ -18,7 +18,23 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /root/webbpage
+            set -e
+            cd /root/Main
+
+            # Pull latest code
             git pull origin main
-            sudo systemctl reload apache2
+
+            # Copy v2 site to be the root webpage
+            cp -r webpage/v2/* webpage/
+
+            # Copy WebP images and new assets
+            cp webpage/assets/*.webp webpage/v2/ 2>/dev/null || true
+
+            # Copy SEO files to root
+            cp webpage/robots.txt webpage/ 2>/dev/null || true
+            cp webpage/sitemap.xml webpage/ 2>/dev/null || true
+
+            # Reload nginx
+            sudo systemctl reload nginx || sudo nginx -s reload
+
             echo "Deployment complete at $(date)"
