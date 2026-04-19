@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://6phene.com/sitemap.xml
+
+# Block internal/API paths
+Disallow: /api/
+Disallow: /invoice/
+Disallow: /webpage/

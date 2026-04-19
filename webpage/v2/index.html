@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>6PHENE INC | Advanced Graphene Solutions</title>
+    <meta name="description" content="Advanced graphene nanotechnology solutions engineered for defense, energy, and industrial innovation.">
+    <meta name="theme-color" content="#1AFFD5">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <link rel="canonical" href="https://6phene.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://6phene.com/">
+    <meta property="og:title" content="6PHENE INC — Advanced Graphene Solutions">
+    <meta property="og:description" content="Pioneering roll-to-roll laser-induced graphene manufacturing in Canada. Targeting ballistic composites, aerospace structures, and sports equipment. Seeking collaboration partners.">
+    <meta property="og:image" content="https://6phene.com/assets/og-card.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="6PHENE INC">
+    <meta property="og:locale" content="en_CA">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="6PHENE INC — Advanced Graphene Solutions">
+    <meta name="twitter:description" content="Pioneering R2R laser-induced graphene manufacturing. Targeting 10–40× cost reduction vs CVD. Ontario, Canada. Seeking partners.">
+    <meta name="twitter:image" content="https://6phene.com/assets/og-card.png">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://6phene.com/#org",
+          "name": "6Phene Graphene Inc.",
+          "alternateName": "6PHENE INC",
+          "url": "https://6phene.com",
+          "logo": "https://6phene.com/assets/logo-icon.png",
+          "description": "Advanced materials R&D company specialising in laser-induced graphene nanotechnology. Proprietary roll-to-roll LIG production line for commercial-scale graphene composites.",
+          "foundingDate": "2026",
+          "foundingLocation": "Ontario, Canada",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Ontario",
+            "addressCountry": "CA"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-416-779-2847",
+            "email": "info@6phene.com",
+            "contactType": "technical support"
+          },
+          "sameAs": ["https://www.linkedin.com/company/6phene"],
+          "founder": [
+            {
+              "@type": "Person",
+              "name": "Kavan Kissoon",
+              "jobTitle": "Chief Executive Officer"
+            },
+            {
+              "@type": "Person",
+              "name": "Santiago Escobar",
+              "jobTitle": "Chief Technology Officer"
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "url": "https://6phene.com",
+          "name": "6PHENE INC",
+          "publisher": {"@id": "https://6phene.com/#org"}
+        }
+      ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Modular CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<!-- Skip Link -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- Scroll Progress -->
+<div id="scroll-progress"></div>
+
+<!-- Custom Cursor -->
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- Background Canvas (full site) -->
+<canvas id="bg-canvas"></canvas>
+
+<!-- ======================== FLOATING NAV ======================== -->
+<nav class="nav" id="mainNav" role="banner">
+    <a class="nav-logo" onclick="navigate('home')" aria-label="6PHENE INC - Home">
+        <img src="/assets/logo-icon.png" alt="" class="logo-icon" width="36" height="36" loading="eager" decoding="async">
+        <img src="/assets/logo-wordmark.svg" alt="6PHENE INC Nanotechnologies" class="logo-wordmark" height="22" loading="eager" decoding="async">
+    </a>
+    <div class="nav-links">
+        <a onclick="navigate('home')" class="active" data-nav="home">Home</a>
+        <a onclick="navigate('products')" data-nav="products">Products</a>
+        <a onclick="navigate('technology')" data-nav="technology">Technology</a>
+        <a onclick="navigate('about')" data-nav="about">About</a>
+        <a onclick="navigate('contact')" data-nav="contact">Contact</a>
+    </div>
+    <a class="nav-cta nav-cta-desktop" onclick="openCollabModal()" aria-label="Request Collaboration">
+        Request Collaboration
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+    </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" id="mobileClose" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <a onclick="navigate('home');closeMobile()">Home</a>
+    <a onclick="navigate('products');closeMobile()">Products</a>
+    <a onclick="navigate('technology');closeMobile()">Technology</a>
+    <a onclick="navigate('about');closeMobile()">About</a>
+    <a onclick="navigate('contact');closeMobile()">Contact</a>
+    <a class="btn-primary btn-sm" onclick="openCollabModal();closeMobile()" style="margin-top:16px;">Request Collaboration</a>
+</div>
+
+<main id="main-content" role="main">
+
+<!-- ======================== HOME PAGE ======================== -->
+<div class="page-section active" id="page-home">
+
+    <!-- Stage Banner -->
+    <div class="stage-banner">
+        <span>R&D Stage Company -- Not Yet Generating Revenue</span>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero" id="hero-section">
+        <div style="position:absolute; right:-5%; top:10%; width:55%; height:80%; opacity:0.08; pointer-events:none; z-index:0;">
+            <img src="/assets/ballistic-test.webp" alt="" style="width:100%; height:100%; object-fit:cover; filter:blur(2px) saturate(0.5);" loading="lazy" decoding="async" aria-hidden="true">
+        </div>
+        <div class="hero-content reveal">
+            <h1>
+                <span id="typewriter-text"></span><span class="typewriter-cursor"></span>
+            </h1>
+            <p class="hero-sub">
+                6PHENE INC engineers laser-induced graphene composites for ballistic protection, high-performance sports equipment, and aerospace structural systems. Our proprietary R2R LIG process makes commercial-scale graphene a reality.
+            </p>
+            <div class="hero-ctas">
+                <a class="btn-primary" onclick="navigate('products')">
+                    Explore Platforms
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <a class="btn-outline" onclick="navigate('contact')">
+                    Partner With Us
+                </a>
+            </div>
+            <p class="hero-disclaimer">All specifications are R&D targets. Products not yet commercially available.</p>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar reveal">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="43">43+</div>
+                    <div class="stat-label">Target Substrate Configs</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">13-Station</div>
+                    <div class="stat-label">R2R Line (In Development)</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10–40×</div>
+                    <div class="stat-label">Target CVD Cost Reduction</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trust Bar -->
+    <section class="trust-bar reveal">
+        <div class="container">
+            <div class="section-label text-center" style="margin-bottom: 24px;">Target Material Suppliers</div>
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <div class="trust-name">DUPONT</div>
+                    <div class="trust-sub">Kevlar Fiber</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-name">TORAY</div>
+                    <div class="trust-sub">Carbon Fiber</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-name">COHERENT</div>
+                    <div class="trust-sub">CO2 Lasers</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-name">HUNTSMAN</div>
+                    <div class="trust-sub">Resins</div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-name">HEXION</div>
+                    <div class="trust-sub">Resins</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section class="section value-section reveal">
+        <div class="container text-center">
+            <p class="section-label">The Problem</p>
+            <h2 class="section-title" style="max-width: 860px; margin: 0 auto 1.5rem;">
+                Graphene has been called a wonder material for 20 years.
+                <span class="highlight">So why is nobody using it?</span>
+            </h2>
+            <p class="section-sub mx-auto">
+                Because making it at scale has been impossibly expensive. CVD graphene costs thousands per square meter. We changed that with laser-induced graphene on a roll-to-roll production line, dropping costs by 10-40x while maintaining quality.
+            </p>
+        </div>
+    </section>
+
+    <!-- Marquee Strip -->
+    <div class="marquee-strip">
+        <div class="marquee-track">
+            <span>BALLISTIC PROTECTION</span><span class="sep">/</span>
+            <span>LASER-INDUCED GRAPHENE</span><span class="sep">/</span>
+            <span>ROLL-TO-ROLL MANUFACTURING</span><span class="sep">/</span>
+            <span>ELECTROPHORETIC DEPOSITION</span><span class="sep">/</span>
+            <span>SPORTS COMPOSITES</span><span class="sep">/</span>
+            <span>AEROSPACE STRUCTURES</span><span class="sep">/</span>
+            <span>DIGITAL TWIN AUTOMATION</span><span class="sep">/</span>
+            <span>ONTARIO CANADA</span><span class="sep">/</span>
+            <span>BALLISTIC PROTECTION</span><span class="sep">/</span>
+            <span>LASER-INDUCED GRAPHENE</span><span class="sep">/</span>
+            <span>ROLL-TO-ROLL MANUFACTURING</span><span class="sep">/</span>
+            <span>ELECTROPHORETIC DEPOSITION</span><span class="sep">/</span>
+            <span>SPORTS COMPOSITES</span><span class="sep">/</span>
+            <span>AEROSPACE STRUCTURES</span><span class="sep">/</span>
+            <span>DIGITAL TWIN AUTOMATION</span><span class="sep">/</span>
+            <span>ONTARIO CANADA</span><span class="sep">/</span>
+        </div>
+    </div>
+
+    <!-- Platforms (Bento Grid) -->
+    <section class="section reveal">
+        <div class="container">
+            <p class="section-label">R&D Platforms</p>
+            <h2 class="section-title" style="margin-bottom: 2.5rem;">Product Platforms</h2>
+
+            <div class="bento-grid">
+                <!-- Large card: Ballistics -->
+                <div class="glass-card glass-card-lift bento-large">
+                    <span class="chip chip-amber">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        Prototype
+                    </span>
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3>Graphene-Enhanced Ballistic Systems</h3>
+                    <p class="one-liner">Graphene-reinforced aramid systems targeting improved energy dissipation and weight efficiency for military and law enforcement.</p>
+                    <ul class="platform-bullets">
+                        <li>Soft armor panel architectures (target: NIJ IIIA)</li>
+                        <li>Hard armor insert concepts (target: NIJ III/IV)</li>
+                        <li>Flexible trauma-attenuating layers</li>
+                        <li>EPD composite bonding on aramid and carbon fiber</li>
+                    </ul>
+                    <div class="tags">
+                        <span class="tag">EPD</span>
+                        <span class="tag">Aramid Composites</span>
+                        <span class="tag">Impact Energy</span>
+                        <span class="tag">Kevlar</span>
+                    </div>
+                    <a class="btn-primary btn-sm" onclick="openCollabModal('Ballistics')">
+                        Request Collaboration
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                </div>
+
+                <!-- Small card: Additives -->
+                <div class="glass-card glass-card-lift">
+                    <span class="chip chip-teal">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                        Pilot R&D
+                    </span>
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3h6M10 3v7.4a2 2 0 0 1-.6 1.4L4 17.2a2 2 0 0 0 1.5 3.3h13a2 2 0 0 0 1.5-3.3l-5.4-5.4a2 2 0 0 1-.6-1.4V3"/></svg>
+                    </div>
+                    <h3>Composite Additives</h3>
+                    <p class="one-liner">Functional graphene/rGO additives to enhance mechanical, thermal, and electrical performance.</p>
+                    <div class="tags">
+                        <span class="tag">rGO</span>
+                        <span class="tag">Dispersion</span>
+                        <span class="tag">Scale-Up</span>
+                    </div>
+                    <a class="btn-outline btn-sm" onclick="openCollabModal('Additives')" style="width:100%;justify-content:center;">
+                        Learn More
+                    </a>
+                </div>
+
+                <!-- Small card: LIG -->
+                <div class="glass-card glass-card-lift">
+                    <span class="chip chip-purple">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                        Research
+                    </span>
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                    </div>
+                    <h3>LIG Materials</h3>
+                    <p class="one-liner">On-demand graphene structures for sensing, heating, and embedded functional surfaces.</p>
+                    <div class="tags">
+                        <span class="tag">LIG</span>
+                        <span class="tag">Functional Surfaces</span>
+                        <span class="tag">Sensors</span>
+                    </div>
+                    <a class="btn-outline btn-sm" onclick="openCollabModal('LIG')" style="width:100%;justify-content:center;">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Strip -->
+    <section class="section reveal" style="background: rgba(17,24,32,0.5);">
+        <div class="container">
+            <p class="section-label">Technology</p>
+            <h2 class="section-title" style="margin-bottom: 2.5rem;">Production Capabilities</h2>
+            <div class="tech-split">
+                <div class="glass-card">
+                    <h3 style="font-size:1.1rem; color: #fff; margin-bottom: 1.5rem;">Key Specifications</h3>
+                    <table class="spec-table">
+                        <tr><td>Production Method</td><td>R2R Laser-Induced Graphene</td></tr>
+                        <tr><td>Stations (Target)</td><td>13 (continuous line)</td></tr>
+                        <tr><td>Substrate Targets</td><td>43+ configurations</td></tr>
+                        <tr><td>Sheet Resistance Target</td><td>&lt; 10 ohm/sq</td></tr>
+                        <tr><td>Defect Salvage Target</td><td>40-70% via ML vision</td></tr>
+                        <tr><td>Cost vs CVD (Target)</td><td>10-40x reduction</td></tr>
+                        <tr><td>QA Methods (Planned)</td><td>4-probe + Raman + MV</td></tr>
+                    </table>
+                </div>
+                <div>
+                    <h3 style="font-size:1.1rem; color: #fff; margin-bottom: 1.5rem;">Production Flow</h3>
+                    <div class="flow-steps">
+                        <div class="flow-step">
+                            <div>
+                                <h4>Substrate Loading</h4>
+                                <p>Roll-fed polyimide, aramid, or carbon fiber substrate enters the line</p>
+                            </div>
+                        </div>
+                        <div class="flow-step">
+                            <div>
+                                <h4>Laser Patterning</h4>
+                                <p>CO2 laser converts surface carbon into 3D porous graphene with real-time power modulation</p>
+                            </div>
+                        </div>
+                        <div class="flow-step">
+                            <div>
+                                <h4>Machine Vision Inspection</h4>
+                                <p>Automated defect classification and correction laser remediation</p>
+                            </div>
+                        </div>
+                        <div class="flow-step">
+                            <div>
+                                <h4>Quality Verification</h4>
+                                <p>Inline 4-probe resistance mapping and Raman spectroscopy batch verification</p>
+                            </div>
+                        </div>
+                        <div class="flow-step">
+                            <div>
+                                <h4>Post-Processing</h4>
+                                <p>EPD deposition, resin infusion, or direct output depending on application</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions 2x2 -->
+    <section class="section reveal">
+        <div class="container">
+            <p class="section-label">Target Verticals</p>
+            <h2 class="section-title" style="margin-bottom: 2.5rem;">Solutions</h2>
+            <div class="solutions-grid">
+                <div class="glass-card glass-card-lift" style="text-align:center; padding: 2.5rem 2rem;">
+                    <div class="card-icon" style="margin: 0 auto 1rem;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3 style="font-size:1.2rem; color:#fff; margin-bottom:0.5rem;">Ballistic Protection</h3>
+                    <p style="color:var(--muted); font-size:0.9rem; line-height:1.6;">NIJ-certified graphene-enhanced soft armor and hard plates for military and law enforcement. EPD composite bonding on aramid and carbon fiber.</p>
+                    <div class="image-card" style="margin-top:1.25rem;">
+                        <img src="/assets/ballistic-test.webp" alt="Graphene-enhanced ballistic armor stopping projectile" loading="lazy" decoding="async">
+                    </div>
+                </div>
+                <div class="glass-card glass-card-lift" style="text-align:center; padding: 2.5rem 2rem;">
+                    <div class="card-icon" style="margin: 0 auto 1rem;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg>
+                    </div>
+                    <h3 style="font-size:1.2rem; color:#fff; margin-bottom:0.5rem;">Sports & Recreation</h3>
+                    <p style="color:var(--muted); font-size:0.9rem; line-height:1.6;">Graphene-reinforced carbon fiber hockey sticks, helmets, lacrosse shafts, tennis racquets, and bicycle frames with superior fracture toughness.</p>
+                    <div class="image-card" style="margin-top:1.25rem;">
+                        <img src="/assets/sports-composite.webp" alt="Graphene-reinforced carbon fiber sports equipment" loading="lazy" decoding="async">
+                    </div>
+                </div>
+                <div class="glass-card glass-card-lift" style="text-align:center; padding: 2.5rem 2rem;">
+                    <div class="card-icon" style="margin: 0 auto 1rem;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
+                    </div>
+                    <h3 style="font-size:1.2rem; color:#fff; margin-bottom:0.5rem;">Aerospace & Defense</h3>
+                    <p style="color:var(--muted); font-size:0.9rem; line-height:1.6;">Fuselage skin panels, wing de-icing systems, helicopter rotor blade patches, satellite structural components, and lightning strike protection.</p>
+                    <div class="image-card" style="margin-top:1.25rem;">
+                        <img src="/assets/aerospace-panel.webp" alt="Graphene composite aerospace panel on aircraft wing" loading="lazy" decoding="async">
+                    </div>
+                </div>
+                <div class="glass-card glass-card-lift" style="text-align:center; padding: 2.5rem 2rem;">
+                    <div class="card-icon" style="margin: 0 auto 1rem;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="2" y1="9" x2="22" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                    </div>
+                    <h3 style="font-size:1.2rem; color:#fff; margin-bottom:0.5rem;">Bulk Materials Supply</h3>
+                    <p style="color:var(--muted); font-size:0.9rem; line-height:1.6;">Graphene epoxy resins, prepreg tape, coating solutions, and quality reference standards for OEM integration and B2B partnerships.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Explainer -->
+    <section class="section reveal">
+        <div class="container-sm">
+            <div class="glass-card" style="padding: 0; overflow: hidden;">
+                <button class="explainer-toggle" id="explainerToggle" aria-expanded="false" aria-controls="explainerBody">
+                    <span>What is Graphene?</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="explainer-body" id="explainerBody">
+                    <div class="explainer-inner">
+                        <p>Graphene is a single layer of carbon atoms arranged in a two-dimensional honeycomb lattice. It is the basic building block for other graphite materials but possesses miraculous properties on its own.</p>
+                        <p>It is the strongest material ever tested (200x stronger than steel), the best conductor of heat and electricity, and nearly transparent. It has the potential to revolutionize batteries, computing, and construction.</p>
+                        <p>While theorized for decades, it was first isolated in 2004 at the University of Manchester, earning Andre Geim and Konstantin Novoselov the Nobel Prize in Physics in 2010.</p>
+                        <p style="margin-bottom:0;">The primary challenge has always been cost-effective production at scale. Traditional CVD methods cost thousands per square meter. 6PHENE's laser-induced graphene process solves this, achieving a 10-40x cost reduction.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Milestones -->
+    <section class="section reveal">
+        <div class="container-sm">
+            <p class="section-label">Journey</p>
+            <h2 class="section-title" style="margin-bottom: 2.5rem;">Milestones</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">Q1 2026</div>
+                    <div class="timeline-title">Company Founded</div>
+                    <div class="timeline-desc">6Phene Graphene Inc. federally incorporated under CBCA. Kavan Kissoon (CEO) and Santiago Escobar, M.Sc. (CTO) begin R&D operations in Ontario, Canada.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Q2 2026</div>
+                    <div class="timeline-title">R2R Line Design &amp; Substrate Validation</div>
+                    <div class="timeline-desc">13-station roll-to-roll LIG production line architecture finalized. Initial substrate validation on polyimide (Kapton) and aramid fibers. Supplier relationships established with DuPont, Toray, and Coherent.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Q3 2026</div>
+                    <div class="timeline-title">EPD Process Development</div>
+                    <div class="timeline-desc">Electrophoretic deposition protocols for graphene/Kevlar hybrid composites. Expanding substrate library across carbon fiber, PET, PBO, and hybrid weaves. Digital twin runtime integration.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Q4 2026</div>
+                    <div class="timeline-title">Pilot Production &amp; Partner Programs</div>
+                    <div class="timeline-desc">First pilot production runs. Inline QA system deployment (4-probe, Raman, machine vision). Actively seeking partners for ballistic testing, sports equipment prototyping, and aerospace validation.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2027+</div>
+                    <div class="timeline-title">Scale &amp; Certification</div>
+                    <div class="timeline-desc">NIJ ballistic certification testing. Commercial-scale production. SR&amp;ED and IRAP funding applications. Strategic partnerships with defense and aerospace primes.</div>
+                </div>
+            </div>
+
+            <!-- Proof cards -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 2rem;">
+                <div class="glass-card" style="padding:1.25rem; text-align:center;">
+                    <div style="font-family:'DM Mono',monospace; font-size:1.5rem; font-weight:700; color:var(--teal);">2026</div>
+                    <div style="font-size:0.8rem; color:var(--muted);">Year Founded</div>
+                </div>
+                <div class="glass-card" style="padding:1.25rem; text-align:center;">
+                    <div style="font-family:'DM Mono',monospace; font-size:1.5rem; font-weight:700; color:var(--teal);">CBCA</div>
+                    <div style="font-size:0.8rem; color:var(--muted);">Federally Incorporated</div>
+                </div>
+                <div class="glass-card" style="padding:1.25rem; text-align:center;">
+                    <div style="font-family:'DM Mono',monospace; font-size:1.5rem; font-weight:700; color:var(--teal);">3</div>
+                    <div style="font-size:0.8rem; color:var(--muted);">Active R&D Platforms</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="section reveal" style="background: rgba(17,24,32,0.5);">
+        <div class="container">
+            <p class="section-label">How We Compare</p>
+            <h2 class="section-title" style="margin-bottom: 2.5rem;">Graphene Production Methods</h2>
+            <div class="glass-card" style="overflow-x: auto; padding: 0;">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Method</th>
+                            <th>Cost/m2</th>
+                            <th>Scalability</th>
+                            <th>Quality</th>
+                            <th>Speed</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="comparison-highlight">
+                            <td>6PHENE R2R LIG</td>
+                            <td>Low</td>
+                            <td>Continuous R2R</td>
+                            <td>High (inline QC)</td>
+                            <td>Fast</td>
+                        </tr>
+                        <tr>
+                            <td>CVD (Chemical Vapor Deposition)</td>
+                            <td>Very High</td>
+                            <td>Batch, limited</td>
+                            <td>Highest (mono)</td>
+                            <td>Slow</td>
+                        </tr>
+                        <tr>
+                            <td>Mechanical Exfoliation</td>
+                            <td>Extreme</td>
+                            <td>Lab only</td>
+                            <td>Highest</td>
+                            <td>Very Slow</td>
+                        </tr>
+                        <tr>
+                            <td>Wet-Chemical rGO</td>
+                            <td>Low-Med</td>
+                            <td>Batch scalable</td>
+                            <td>Lower (defects)</td>
+                            <td>Medium</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- News -->
+    <section class="section reveal">
+        <div class="container">
+            <p class="section-label">Updates</p>
+            <h2 class="section-title" style="margin-bottom: 2.5rem;">Latest News</h2>
+            <div class="news-grid">
+                <div class="glass-card glass-card-lift news-card">
+                    <div class="news-date">April 2026</div>
+                    <h4>6PHENE INC Launches Digital Platform</h4>
+                    <p>Our website goes live, showcasing R&D capabilities and opening collaboration inquiries for defense, sports, and aerospace partners across Canada and internationally.</p>
+                </div>
+                <div class="glass-card glass-card-lift news-card">
+                    <div class="news-date">March 2026</div>
+                    <h4>R2R Pilot Line Architecture Finalized</h4>
+                    <p>13-station roll-to-roll LIG production line architecture finalized. Inline QA integration designed. Initial LIG formation experiments on Kapton polyimide substrate underway.</p>
+                </div>
+                <div class="glass-card glass-card-lift news-card">
+                    <div class="news-date">January 2026</div>
+                    <h4>Company Incorporation &amp; R&amp;D Begins</h4>
+                    <p>6Phene Graphene Inc. federally incorporated under CBCA. R&D operations commence with initial substrate characterization and supplier engagement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founders -->
+    <section class="section reveal">
+        <div class="container text-center">
+            <p class="section-label">Team</p>
+            <h2 class="section-title" style="margin-bottom: 2.5rem;">Our Founders</h2>
+            <div class="founders-grid">
+                <div class="glass-card" style="text-align:center; padding: 2.5rem 2rem;">
+                    <div class="founder-avatar">KK</div>
+                    <h3 style="font-size:1.15rem; color:#fff; margin-bottom: 4px;">Kavan Kissoon</h3>
+                    <p style="font-family:'DM Mono',monospace; font-size:0.75rem; color:var(--teal); text-transform:uppercase; letter-spacing:0.08em; margin-bottom: 1rem;">Chief Executive Officer</p>
+                    <p style="color:var(--muted); font-size:0.875rem; line-height:1.6;">Leads corporate strategy, manufacturing engineering, and commercialization. Designing the R2R LIG pilot line and building 6PHENE's supplier relationships across the advanced materials supply chain.</p>
+                </div>
+                <div class="glass-card" style="text-align:center; padding: 2.5rem 2rem;">
+                    <div class="founder-avatar">SE</div>
+                    <h3 style="font-size:1.15rem; color:#fff; margin-bottom: 4px;">Santiago Escobar, M.Sc.</h3>
+                    <p style="font-family:'DM Mono',monospace; font-size:0.75rem; color:var(--teal); text-transform:uppercase; letter-spacing:0.08em; margin-bottom: 1rem;">Chief Technology Officer</p>
+                    <p style="color:var(--muted); font-size:0.875rem; line-height:1.6;">Directs materials science R&D and process optimization. Leading substrate validation and graphene composite development for ballistic, aerospace, and sports applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section reveal" style="position:relative; z-index:2;">
+        <div class="cta-glow"></div>
+        <div class="container" style="position:relative; z-index:1;">
+            <h2 class="section-title" style="margin-bottom:1rem;">Ready to Collaborate?</h2>
+            <p class="section-sub mx-auto text-center" style="margin-bottom: 2rem;">
+                Whether you are an investor, defense contractor, sports equipment manufacturer, or engineer -- there is a place for you at 6PHENE INC.
+            </p>
+            <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+                <a class="btn-primary" onclick="navigate('contact')">
+                    Contact Our Team
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <a class="btn-outline" onclick="openCollabModal()">
+                    Request Collaboration
+                </a>
+            </div>
+        </div>
+    </section>
+
+</div><!-- end page-home -->
+
+
+<!-- ======================== PRODUCTS PAGE ======================== -->
+<div class="page-section" id="page-products">
+    <div class="page-hero">
+        <p class="section-label">R&D Platforms</p>
+        <h1>Product Platforms</h1>
+        <p class="page-sub">R&D-stage platforms designed for future commercialization. Not yet available for sale.</p>
+        <div style="margin-top:1.5rem;">
+            <span class="chip chip-amber" style="font-size:0.7rem;">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6M10 3v7.4a2 2 0 0 1-.6 1.4L4 17.2a2 2 0 0 0 1.5 3.3h13a2 2 0 0 0 1.5-3.3l-5.4-5.4a2 2 0 0 1-.6-1.4V3"/></svg>
+                Performance targets are aspirational until validated
+            </span>
+        </div>
+    </div>
+
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <!-- Platform A: Ballistics -->
+            <div class="glass-card" style="margin-bottom: 2rem; padding: 2.5rem;">
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:2.5rem; align-items:center;">
+                    <div>
+                        <div style="display:flex; gap:12px; margin-bottom:1rem; flex-wrap:wrap;">
+                            <span class="chip chip-amber">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                                Prototype
+                            </span>
+                        </div>
+                        <h3 style="font-size:1.6rem; color:#fff; margin-bottom:0.75rem;">Graphene-Enhanced Ballistic Systems</h3>
+                        <p style="color:var(--muted); font-size:0.95rem; line-height:1.7; margin-bottom:1.5rem;">Graphene-reinforced aramid systems targeting improved energy dissipation and weight efficiency.</p>
+                        <ul class="platform-bullets">
+                            <li>Soft armor panel architectures (target: NIJ IIIA)</li>
+                            <li>Hard armor insert concepts (target: NIJ III/IV)</li>
+                            <li>Flexible trauma-attenuating layers</li>
+                        </ul>
+                        <div class="tags" style="margin-top:1.25rem;">
+                            <span class="tag">EPD</span>
+                            <span class="tag">Aramid Composites</span>
+                            <span class="tag">Impact Energy</span>
+                        </div>
+                        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:1.25rem;">
+                            <a class="btn-primary btn-sm" onclick="openCollabModal('Ballistics')">Request Collaboration</a>
+                            <button class="btn-outline btn-sm" onclick="toggleDetails(this)" aria-expanded="false">View Technical Focus</button>
+                        </div>
+                    </div>
+                    <div style="border-radius:12px; overflow:hidden; border:1px solid rgba(255,255,255,0.06); aspect-ratio:3/4;">
+                        <img src="/assets/ballistic-soldier.webp" alt="Tactical operator wearing graphene-enhanced Kevlar body armor" loading="lazy" decoding="async" style="width:112%; height:112%; object-fit:cover; display:block; margin:-6% 0 0 -6%;">
+                    </div>
+                </div>
+                <div class="detail-panel" style="max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
+                    <div style="padding:1.5rem 0 0;">
+                        <div class="glass-card" style="background:rgba(0,0,0,0.3);">
+                            <h4 style="font-family:'DM Mono',monospace; font-size:0.75rem; color:var(--teal); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.5rem;">Core Methods</h4>
+                            <p style="color:var(--muted); font-size:0.85rem; line-height:1.6; margin-bottom:1rem;">Electrophoretic deposition (EPD), Graphene/Kevlar hybrid layup, Vacuum-assisted resin infusion, Impact energy absorption testing.</p>
+                            <h4 style="font-family:'DM Mono',monospace; font-size:0.75rem; color:var(--teal); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.5rem;">What We're Seeking</h4>
+                            <p style="color:var(--muted); font-size:0.85rem; line-height:1.6;">Ballistic testing partners, defense industry collaborators, certified test facilities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Platform B: Additives -->
+            <div class="glass-card" style="margin-bottom: 2rem; padding: 2.5rem;">
+                <div style="display:flex; gap:12px; margin-bottom:1rem; flex-wrap:wrap;">
+                    <span class="chip chip-teal">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                        Pilot R&D
+                    </span>
+                </div>
+                <h3 style="font-size:1.6rem; color:#fff; margin-bottom:0.75rem;">Graphene Composite Additives</h3>
+                <p style="color:var(--muted); font-size:0.95rem; line-height:1.7; margin-bottom:1.5rem; max-width:700px;">Functional graphene/rGO additives to enhance mechanical, thermal, and electrical performance in matrices.</p>
+                <ul class="platform-bullets">
+                    <li>Resin dispersion packages for Kevlar/CF systems</li>
+                    <li>Conductive concrete additives (heating/EMI)</li>
+                    <li>Processability & QC workflows</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">rGO</span>
+                    <span class="tag">Dispersion</span>
+                    <span class="tag">Scale-Up</span>
+                </div>
+                <div style="display:flex; gap:12px; flex-wrap:wrap;">
+                    <a class="btn-primary btn-sm" onclick="openCollabModal('Additives')">Request Collaboration</a>
+                    <button class="btn-outline btn-sm" onclick="toggleDetails(this)" aria-expanded="false">View Technical Focus</button>
+                </div>
+                <div class="detail-panel" style="max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
+                    <div style="padding:1.5rem 0 0;">
+                        <div class="glass-card" style="background:rgba(0,0,0,0.3);">
+                            <h4 style="font-family:'DM Mono',monospace; font-size:0.75rem; color:var(--teal); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.5rem;">Core Methods</h4>
+                            <p style="color:var(--muted); font-size:0.85rem; line-height:1.6; margin-bottom:1rem;">Solvent-assisted dispersion, Surface functionalization, Resin compatibility optimization, Batch consistency QA/QC.</p>
+                            <h4 style="font-family:'DM Mono',monospace; font-size:0.75rem; color:var(--teal); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.5rem;">What We're Seeking</h4>
+                            <p style="color:var(--muted); font-size:0.85rem; line-height:1.6;">Composite manufacturers, resin suppliers, infrastructure partners for pilot trials.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Platform C: LIG -->
+            <div class="glass-card" style="margin-bottom: 2rem; padding: 2.5rem;">
+                <div style="display:flex; gap:12px; margin-bottom:1rem; flex-wrap:wrap;">
+                    <span class="chip chip-purple">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                        Research Validation
+                    </span>
+                </div>
+                <h3 style="font-size:1.6rem; color:#fff; margin-bottom:0.75rem;">Laser-Induced Graphene (LIG) Materials</h3>
+                <p style="color:var(--muted); font-size:0.95rem; line-height:1.7; margin-bottom:1.5rem; max-width:700px;">On-demand graphene structures for sensing, heating, and embedded functional surfaces.</p>
+                <ul class="platform-bullets">
+                    <li>Patterned conductive surfaces</li>
+                    <li>Integrated heating elements</li>
+                    <li>Sensor-ready substrates</li>
+                </ul>
+                <div class="tags">
+                    <span class="tag">LIG</span>
+                    <span class="tag">Functional Surfaces</span>
+                    <span class="tag">Sensors</span>
+                </div>
+                <div style="display:flex; gap:12px; flex-wrap:wrap;">
+                    <a class="btn-primary btn-sm" onclick="openCollabModal('LIG')">Request Collaboration</a>
+                    <button class="btn-outline btn-sm" onclick="toggleDetails(this)" aria-expanded="false">View Technical Focus</button>
+                </div>
+                <div class="detail-panel" style="max-height:0; overflow:hidden; transition:max-height 0.4s ease;">
+                    <div style="padding:1.5rem 0 0;">
+                        <div class="glass-card" style="background:rgba(0,0,0,0.3);">
+                            <h4 style="font-family:'DM Mono',monospace; font-size:0.75rem; color:var(--teal); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.5rem;">Core Methods</h4>
+                            <p style="color:var(--muted); font-size:0.85rem; line-height:1.6; margin-bottom:1rem;">CO2 laser patterning, Polyimide substrate optimization, Conductivity characterization, Environmental stability testing.</p>
+                            <h4 style="font-family:'DM Mono',monospace; font-size:0.75rem; color:var(--teal); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.5rem;">What We're Seeking</h4>
+                            <p style="color:var(--muted); font-size:0.85rem; line-height:1.6;">Sensor developers, flexible electronics manufacturers, academic research partners.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coming Next -->
+            <h3 style="font-size:1.2rem; color:var(--muted); margin: 3rem 0 1.5rem; text-align:center;">Coming Next</h3>
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                <div class="glass-card">
+                    <span class="chip" style="background:rgba(34,197,94,0.12); color:#22c55e; border:1px solid rgba(34,197,94,0.25);">In Development</span>
+                    <h4 style="font-size:1.05rem; color:var(--text); margin-top:0.5rem; margin-bottom:0.5rem;">Multi-Axial Fiber Architectures</h4>
+                    <p style="color:var(--muted); font-size:0.85rem; line-height:1.5;">Triaxial/multi-axial weaves for stiffness, drape, and impact response tuning.</p>
+                </div>
+                <div class="glass-card">
+                    <span class="chip" style="background:rgba(236,72,153,0.12); color:#ec4899; border:1px solid rgba(236,72,153,0.25);">Active Build</span>
+                    <h4 style="font-size:1.05rem; color:var(--text); margin-top:0.5rem; margin-bottom:0.5rem;">Materials Characterization Stack</h4>
+                    <p style="color:var(--muted); font-size:0.85rem; line-height:1.5;">Metrology + QA methods for repeatable graphene composite performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div><!-- end page-products -->
+
+
+<!-- ======================== TECHNOLOGY PAGE ======================== -->
+<div class="page-section" id="page-technology">
+    <div class="page-hero">
+        <p class="section-label">Engineering</p>
+        <h1>Our Technology</h1>
+        <p class="page-sub">Proprietary roll-to-roll laser-induced graphene production at industrial scale.</p>
+    </div>
+
+    <section class="section" style="padding-top:0;">
+        <div class="container-sm">
+            <div class="glass-card" style="margin-bottom:2rem;">
+                <div class="card-icon" style="margin-bottom:1rem;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                </div>
+                <h3 style="font-size:1.3rem; color:#fff; margin-bottom:0.75rem;">Roll-to-Roll LIG Production</h3>
+                <p style="color:var(--muted); font-size:0.95rem; line-height:1.7;">Designing a 13-station continuous manufacturing system to produce laser-induced graphene at a fraction of traditional CVD costs. Architecture includes real-time laser modulation with peak/valley power compensation for woven and textured substrates.</p>
+                <div class="image-card" style="margin-top:1.25rem; aspect-ratio:16/8;">
+                    <img src="/assets/r2r-production-line.webp" alt="13-station roll-to-roll laser-induced graphene production line" loading="lazy" decoding="async">
+                </div>
+            </div>
+
+            <div class="glass-card" style="margin-bottom:2rem;">
+                <div class="card-icon" style="margin-bottom:1rem;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3h6M10 3v7.4a2 2 0 0 1-.6 1.4L4 17.2a2 2 0 0 0 1.5 3.3h13a2 2 0 0 0 1.5-3.3l-5.4-5.4a2 2 0 0 1-.6-1.4V3"/></svg>
+                </div>
+                <h3 style="font-size:1.3rem; color:#fff; margin-bottom:0.75rem;">Electrophoretic Deposition (EPD)</h3>
+                <p style="color:var(--muted); font-size:0.95rem; line-height:1.7;">Developing a proprietary graphene deposition process for molecular-level bonding on aramid and carbon fiber substrates. Targeting measurable improvements in energy dissipation for ballistic and structural applications.</p>
+            </div>
+
+            <div class="glass-card" style="margin-bottom:2rem;">
+                <div class="card-icon" style="margin-bottom:1rem;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/></svg>
+                </div>
+                <h3 style="font-size:1.3rem; color:#fff; margin-bottom:0.75rem;">Digital Twin & Automation</h3>
+                <p style="color:var(--muted); font-size:0.95rem; line-height:1.7;">Building a full digital twin runtime with per-station status monitoring, machine vision inspection, and automated correction laser remediation targeting 40-70% defect salvage rates.</p>
+            </div>
+
+            <div class="glass-card" style="margin-bottom:2rem;">
+                <div class="card-icon" style="margin-bottom:1rem;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m7 9 3 3M13 21H3M8 21h6a6 6 0 0 0 0-12h-1"/><circle cx="11" cy="6" r="3"/></svg>
+                </div>
+                <h3 style="font-size:1.3rem; color:#fff; margin-bottom:0.75rem;">Substrate Library (In Development)</h3>
+                <p style="color:var(--muted); font-size:0.95rem; line-height:1.7;">Building a parameter library targeting 43+ configurations spanning polyimide (Kapton), aramid fibers (Kevlar, Nomex, Twaron), carbon fiber (Toray T700S/T1000G), PET, PBO (Zylon), and hybrid weaves. Each substrate to be optimized with proprietary laser settings.</p>
+            </div>
+
+            <h3 style="font-size:1.3rem; color:#fff; margin-bottom:1.5rem; margin-top:3rem; text-align:center;">Quality Assurance</h3>
+            <div class="glass-card">
+                <ul style="padding:0;">
+                    <li style="display:flex; align-items:flex-start; gap:12px; margin-bottom:1rem; color:var(--text); font-size:0.9rem; line-height:1.6;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2" style="flex-shrink:0; margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+                        Planned: Inline 4-probe resistance mapping (&lt; 10 ohm/sq target)
+                    </li>
+                    <li style="display:flex; align-items:flex-start; gap:12px; margin-bottom:1rem; color:var(--text); font-size:0.9rem; line-height:1.6;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2" style="flex-shrink:0; margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+                        Planned: Raman spectroscopy batch verification
+                    </li>
+                    <li style="display:flex; align-items:flex-start; gap:12px; color:var(--text); font-size:0.9rem; line-height:1.6;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="2" style="flex-shrink:0; margin-top:2px;"><polyline points="20 6 9 17 4 12"/></svg>
+                        Planned: Machine vision defect classification (pre/post-imprint)
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div><!-- end page-technology -->
+
+
+<!-- ======================== ABOUT PAGE ======================== -->
+<div class="page-section" id="page-about">
+    <div class="page-hero">
+        <p class="section-label">Our Story</p>
+        <h1>The Graphene Revolution</h1>
+        <p class="page-sub">From atomic precision to industrial scale. We are 6PHENE INC.</p>
+    </div>
+
+    <!-- The Material -->
+    <section class="section" style="padding-top:0;">
+        <div class="container">
+            <div class="about-split reveal">
+                <div>
+                    <h2 class="section-title" style="margin-bottom:2rem;">The Material</h2>
+                    <div class="info-block">
+                        <h4>What is it?</h4>
+                        <p>Graphene is a single layer of carbon atoms arranged in a two-dimensional honeycomb lattice. It is the basic building block for other graphite materials but possesses miraculous properties on its own.</p>
+                    </div>
+                    <div class="info-block">
+                        <h4>Why does it matter?</h4>
+                        <p>It is the strongest material ever tested (200x stronger than steel), the best conductor of heat and electricity, and nearly transparent. It has the potential to revolutionize batteries, computing, and construction.</p>
+                    </div>
+                    <div class="info-block">
+                        <h4>When was it found?</h4>
+                        <p>While theorized for decades, it was first isolated in 2004 at the University of Manchester, earning Geim and Novoselov the Nobel Prize in Physics in 2010.</p>
+                    </div>
+                </div>
+                <div class="about-visual" style="direction:ltr;">
+                    <img src="/assets/hex-lattice-bg.svg" alt="Hexagonal carbon lattice structure" loading="lazy" decoding="async">
+                    <img src="/assets/logo-3d.webp" alt="6PHENE 3D logo" style="position:absolute; width:60%; height:60%; object-fit:contain; opacity:0.9; z-index:1;" loading="lazy" decoding="async">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Company -->
+    <section class="section" style="background: rgba(17,24,32,0.5);">
+        <div class="container">
+            <div class="about-split reveal" style="direction:rtl;">
+                <div style="direction:ltr;">
+                    <h2 class="section-title" style="margin-bottom:2rem;">Our Company</h2>
+                    <div class="info-block">
+                        <h4>Who We Are</h4>
+                        <p>We are a team of engineers and nanotechnology specialists building the bridge between graphene research and commercial reality. Founded by Kavan Kissoon (CEO) and Santiago Escobar, M.Sc. (CTO), 6PHENE INC combines deep materials science expertise with advanced manufacturing engineering.</p>
+                    </div>
+                    <div class="info-block">
+                        <h4>Where We Are</h4>
+                        <p>Headquartered in <strong style="color:var(--teal);">Ontario, Canada</strong>. Federally incorporated under the Canada Business Corporations Act.</p>
+                    </div>
+                    <div class="info-block">
+                        <h4>Why We Exist</h4>
+                        <p>To eliminate the cost barrier that has kept graphene in the lab. Our proprietary R2R LIG process achieves a 10-40x cost reduction over traditional CVD methods -- making commercial-scale graphene composites finally viable.</p>
+                    </div>
+                </div>
+                <div class="about-visual" style="direction:ltr;">
+                    <img src="/assets/ontario-map-bg.svg" alt="Ontario, Canada - 6PHENE headquarters location" loading="lazy" decoding="async">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founders -->
+    <section class="section reveal">
+        <div class="container text-center">
+            <p class="section-label">Leadership</p>
+            <h2 class="section-title" style="margin-bottom:2.5rem;">Our Founders</h2>
+            <div class="founders-grid">
+                <div class="glass-card" style="text-align:center; padding: 2.5rem 2rem;">
+                    <div class="founder-avatar">KK</div>
+                    <h3 style="font-size:1.15rem; color:#fff; margin-bottom: 4px;">Kavan Kissoon</h3>
+                    <p style="font-family:'DM Mono',monospace; font-size:0.75rem; color:var(--teal); text-transform:uppercase; letter-spacing:0.08em; margin-bottom: 1rem;">Chief Executive Officer</p>
+                    <p style="color:var(--muted); font-size:0.875rem; line-height:1.6;">Leads corporate strategy, manufacturing engineering, and commercialization. Designing the R2R LIG pilot line and building 6PHENE's supplier relationships across the advanced materials supply chain.</p>
+                </div>
+                <div class="glass-card" style="text-align:center; padding: 2.5rem 2rem;">
+                    <div class="founder-avatar">SE</div>
+                    <h3 style="font-size:1.15rem; color:#fff; margin-bottom: 4px;">Santiago Escobar, M.Sc.</h3>
+                    <p style="font-family:'DM Mono',monospace; font-size:0.75rem; color:var(--teal); text-transform:uppercase; letter-spacing:0.08em; margin-bottom: 1rem;">Chief Technology Officer</p>
+                    <p style="color:var(--muted); font-size:0.875rem; line-height:1.6;">Directs materials science R&D and process optimization. Leading substrate validation and graphene composite development for ballistic, aerospace, and sports applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section reveal" style="position:relative; z-index:2;">
+        <div class="cta-glow"></div>
+        <div class="container" style="position:relative; z-index:1;">
+            <h2 class="section-title" style="margin-bottom:1rem;">Join the Future</h2>
+            <p class="section-sub mx-auto text-center" style="margin-bottom: 2rem;">
+                Whether you are an investor, defense contractor, sports equipment manufacturer, or engineer -- there is a place for you at 6PHENE INC.
+            </p>
+            <a class="btn-primary" onclick="navigate('contact')">Contact Our Team
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+        </div>
+    </section>
+</div><!-- end page-about -->
+
+
+<!-- ======================== CONTACT PAGE ======================== -->
+<div class="page-section" id="page-contact">
+    <div class="page-hero">
+        <p class="section-label">Reach Out</p>
+        <h1>Get in Touch</h1>
+        <p class="page-sub">Ready to revolutionize your industry with graphene? Our engineering team is ready to discuss partnerships, technical collaboration, and project requirements.</p>
+    </div>
+
+    <section class="section" style="padding-top:0;">
+        <div class="container">
+            <div class="contact-grid reveal">
+                <!-- Info -->
+                <div>
+                    <div class="glass-card contact-info-card" style="margin-bottom:1.5rem;">
+                        <h4>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Headquarters
+                        </h4>
+                        <p><strong style="color:var(--text);">6Phene Graphene Inc.</strong><br>Ontario, Canada<br>Federally Incorporated (CBCA)</p>
+                    </div>
+                    <div class="glass-card contact-info-card" style="margin-bottom:1.5rem;">
+                        <h4>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                            Email & Phone
+                        </h4>
+                        <p style="margin-bottom:0.5rem;">
+                            <span style="color:var(--muted); font-size:0.8rem;">General Inquiries:</span><br>
+                            <a href="mailto:info@6phene.com">info@6phene.com</a>
+                        </p>
+                        <p style="margin-bottom:0.5rem;">
+                            <span style="color:var(--muted); font-size:0.8rem;">Founder & CEO:</span><br>
+                            <a href="mailto:kavankissoon@6phene.com">kavankissoon@6phene.com</a>
+                        </p>
+                        <p>
+                            <span style="color:var(--muted); font-size:0.8rem;">Phone:</span><br>
+                            <a href="tel:+14167792847">+1 (416) 779-2847</a>
+                        </p>
+                    </div>
+                    <div class="glass-card contact-info-card">
+                        <h4>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                            LinkedIn
+                        </h4>
+                        <p><a href="https://linkedin.com/company/6phene" target="_blank" rel="noopener noreferrer">linkedin.com/company/6phene</a></p>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="glass-card" style="padding:2rem;">
+                    <h3 style="font-size:1.2rem; color:#fff; margin-bottom:1.5rem;">Send a Message</h3>
+                    <form id="contactForm" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="cf-first">First Name *</label>
+                                <input type="text" id="cf-first" required placeholder="Your first name">
+                            </div>
+                            <div class="form-group">
+                                <label for="cf-last">Last Name *</label>
+                                <input type="text" id="cf-last" required placeholder="Your last name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="cf-email">Work Email *</label>
+                            <input type="email" id="cf-email" required placeholder="you@organization.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="cf-company">Company / Organization</label>
+                            <input type="text" id="cf-company" placeholder="Company or institution">
+                        </div>
+                        <div class="form-group">
+                            <label for="cf-message">How can we help? *</label>
+                            <textarea id="cf-message" required placeholder="Tell us about your interest or project..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary" style="width:100%; justify-content:center;" id="contactSubmitBtn">
+                            Send Message
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </button>
+                    </form>
+                    <div id="contactSuccess" class="form-success-msg" style="display:none;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <h3>Message Sent!</h3>
+                        <p>Thank you for reaching out. Our team will respond within 2-3 business days.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div><!-- end page-contact -->
+
+</main>
+
+<!-- ======================== FOOTER ======================== -->
+<footer class="footer" id="site-footer" role="contentinfo">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a class="nav-logo" onclick="navigate('home')" style="margin-bottom:4px;" aria-label="6PHENE INC - Home">
+                    <img src="/assets/logo-icon.png" alt="" class="logo-icon" width="32" height="32" loading="lazy" decoding="async">
+                    <img src="/assets/logo-wordmark.svg" alt="6PHENE INC Nanotechnologies" class="logo-wordmark" height="20" loading="lazy" decoding="async">
+                </a>
+                <p>Advanced Graphene Nanotechnology.<br>Pioneering the material revolution.</p>
+                <div class="newsletter-form" style="margin-top:16px;">
+                    <label for="nlEmail" class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">Email for newsletter</label>
+                    <input type="email" placeholder="Enter your email" id="nlEmail" aria-label="Email for newsletter">
+                    <button onclick="handleNewsletter()" aria-label="Subscribe to newsletter">Subscribe</button>
+                </div>
+            </div>
+            <div>
+                <h5>Company</h5>
+                <ul>
+                    <li><a onclick="navigate('about')">About</a></li>
+                    <li><a onclick="navigate('about')">Careers</a></li>
+                    <li><a onclick="navigate('contact')">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>Platforms</h5>
+                <ul>
+                    <li><a onclick="navigate('products')">Ballistic Systems</a></li>
+                    <li><a onclick="navigate('products')">Composite Additives</a></li>
+                    <li><a onclick="navigate('products')">LIG Materials</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>Legal</h5>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 6Phene Graphene Inc. All rights reserved. Federally incorporated under the Canada Business Corporations Act.</span>
+            <div class="footer-socials">
+                <a href="https://linkedin.com/company/6phene" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a href="mailto:info@6phene.com" aria-label="Email">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- ======================== COLLABORATION MODAL ======================== -->
+<div class="modal-overlay" id="collabModal">
+    <div class="modal-box">
+        <div class="modal-header">
+            <h3>Request Collaboration</h3>
+            <button class="modal-close" onclick="closeCollabModal()" aria-label="Close">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+        </div>
+        <div class="modal-body" id="collabFormContainer">
+            <form id="collabForm" novalidate>
+                <div class="form-group">
+                    <label for="collab-name">Full Name *</label>
+                    <input type="text" id="collab-name" required placeholder="Your name">
+                </div>
+                <div class="form-group">
+                    <label for="collab-email">Email Address *</label>
+                    <input type="email" id="collab-email" required placeholder="you@organization.com">
+                </div>
+                <div class="form-group">
+                    <label for="collab-org">Organization</label>
+                    <input type="text" id="collab-org" placeholder="Company or institution">
+                </div>
+                <div class="form-group">
+                    <label for="collab-interest">Area of Interest *</label>
+                    <select id="collab-interest" required>
+                        <option value="">Select an area...</option>
+                        <option value="Ballistics">Ballistic Systems</option>
+                        <option value="Additives">Composite Additives</option>
+                        <option value="LIG">LIG Materials</option>
+                        <option value="Other">Other / General Inquiry</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="collab-message">Message</label>
+                    <textarea id="collab-message" placeholder="Tell us about your interest or project..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="width:100%; justify-content:center;" id="collabSubmitBtn">
+                    Submit Inquiry
+                </button>
+            </form>
+        </div>
+        <div class="modal-footer">No sales or procurement requests at this stage.</div>
+    </div>
+</div>
+
+<!-- Modular JavaScript -->
+<script src="js/navigation.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/cursor.js"></script>
+<script src="js/forms.js"></script>
+</body>
+</html>

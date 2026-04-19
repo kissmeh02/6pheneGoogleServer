@@ -1,11 +1,11 @@
 {
   "name": "6PHENE INC Nanotechnologies",
   "short_name": "6PHENE INC",
-  "description": "Advanced graphene nanotechnology solutions for defense, energy, and industrial applications.",
+  "description": "Advanced graphene nanotechnology R&D company pioneering roll-to-roll laser-induced graphene manufacturing for defense, aerospace, and industrial applications.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#030304",
-  "theme_color": "#50b8b0",
+  "background_color": "#06080A",
+  "theme_color": "#1AFFD5",
   "icons": [
     {
       "src": "/assets/android-chrome-192x192.png",

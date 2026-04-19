@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#06080A"/>
+      <stop offset="100%" stop-color="#0C1118"/>
+    </linearGradient>
+    <linearGradient id="teal-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1AFFD5"/>
+      <stop offset="100%" stop-color="#00E5B8"/>
+    </linearGradient>
+    <!-- Hex pattern -->
+    <pattern id="hexes" patternUnits="userSpaceOnUse" width="60" height="69">
+      <polygon points="30,2 56,17.5 56,48.5 30,64 4,48.5 4,17.5" fill="none" stroke="#1AFFD5" stroke-width="0.5" opacity="0.12"/>
+      <circle cx="30" cy="2" r="1.5" fill="#1AFFD5" opacity="0.2"/>
+      <circle cx="56" cy="17.5" r="1.5" fill="#1AFFD5" opacity="0.2"/>
+      <circle cx="56" cy="48.5" r="1.5" fill="#1AFFD5" opacity="0.2"/>
+      <circle cx="30" cy="64" r="1.5" fill="#1AFFD5" opacity="0.2"/>
+      <circle cx="4" cy="48.5" r="1.5" fill="#1AFFD5" opacity="0.2"/>
+      <circle cx="4" cy="17.5" r="1.5" fill="#1AFFD5" opacity="0.2"/>
+    </pattern>
+    <radialGradient id="glow" cx="0.3" cy="0.5" r="0.7">
+      <stop offset="0%" stop-color="#1AFFD5" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#1AFFD5" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#hexes)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- Left teal accent line -->
+  <rect x="80" y="100" width="3" height="420" fill="#1AFFD5" opacity="0.6" rx="1.5"/>
+
+  <!-- Logo icon (actual asset) -->
+  <image href="logo-icon.png" x="110" y="130" width="80" height="80"/>
+
+  <!-- Logo wordmark (actual asset) -->
+  <image href="logo-wordmark.svg" x="200" y="140" width="340" height="78"/>
+
+  <!-- R&D badge -->
+  <rect x="555" y="160" width="90" height="24" rx="4" fill="rgba(240,165,0,0.15)" stroke="#F0A500" stroke-width="0.5"/>
+  <text x="600" y="177" font-family="monospace" font-size="11" fill="#F0A500" text-anchor="middle" letter-spacing="1.5">R&amp;D STAGE</text>
+
+  <!-- Main headline -->
+  <text x="130" y="300" font-family="Inter, Arial, sans-serif" font-weight="800" font-size="52" fill="#DCE8F0" letter-spacing="-1">
+    Advanced Graphene Solutions
+  </text>
+
+  <!-- Subtitle with teal accent -->
+  <text x="130" y="360" font-family="Inter, Arial, sans-serif" font-weight="800" font-size="42" letter-spacing="-0.5">
+    <tspan fill="#1AFFD5">Roll-to-Roll LIG</tspan>
+    <tspan fill="#DCE8F0"> Manufacturing</tspan>
+  </text>
+
+  <!-- Description -->
+  <text x="130" y="420" font-family="Inter, Arial, sans-serif" font-weight="400" font-size="20" fill="#8A9BAA">
+    Canada's first R2R laser-induced graphene production line
+  </text>
+  <text x="130" y="448" font-family="Inter, Arial, sans-serif" font-weight="400" font-size="20" fill="#8A9BAA">
+    43+ validated substrates · 10-40× CVD cost reduction
+  </text>
+
+  <!-- Bottom stats bar -->
+  <line x1="130" y1="480" x2="900" y2="480" stroke="#1AFFD5" stroke-width="0.5" opacity="0.3"/>
+
+  <text x="130" y="520" font-family="monospace" font-size="13" fill="#5C6E7E" letter-spacing="1.5">DEFENSE</text>
+  <text x="130" y="540" font-family="monospace" font-size="11" fill="#1AFFD5" opacity="0.6">BALLISTIC SYSTEMS</text>
+
+  <text x="350" y="520" font-family="monospace" font-size="13" fill="#5C6E7E" letter-spacing="1.5">AEROSPACE</text>
+  <text x="350" y="540" font-family="monospace" font-size="11" fill="#1AFFD5" opacity="0.6">STRUCTURAL PANELS</text>
+
+  <text x="580" y="520" font-family="monospace" font-size="13" fill="#5C6E7E" letter-spacing="1.5">SPORTS</text>
+  <text x="580" y="540" font-family="monospace" font-size="11" fill="#1AFFD5" opacity="0.6">HIGH-PERFORMANCE</text>
+
+  <!-- Website URL -->
+  <text x="130" y="590" font-family="monospace" font-size="14" fill="#5C6E7E" letter-spacing="1">6phene.com</text>
+
+  <!-- Ontario, Canada -->
+  <text x="1070" y="590" font-family="monospace" font-size="12" fill="#5C6E7E" text-anchor="end" letter-spacing="0.5">Ontario, Canada</text>
+
+  <!-- Decorative hex dots on right side -->
+  <circle cx="1000" cy="200" r="2" fill="#1AFFD5" opacity="0.15"/>
+  <circle cx="1050" cy="230" r="1.5" fill="#1AFFD5" opacity="0.1"/>
+  <circle cx="1100" cy="180" r="2" fill="#1AFFD5" opacity="0.12"/>
+  <circle cx="1020" cy="300" r="1.5" fill="#1AFFD5" opacity="0.08"/>
+  <circle cx="1080" cy="280" r="2" fill="#1AFFD5" opacity="0.1"/>
+  <circle cx="1050" cy="350" r="1.5" fill="#1AFFD5" opacity="0.12"/>
+  <circle cx="1100" cy="320" r="2" fill="#1AFFD5" opacity="0.15"/>
+
+  <!-- Connecting lines between dots -->
+  <line x1="1000" y1="200" x2="1050" y2="230" stroke="#1AFFD5" stroke-width="0.5" opacity="0.08"/>
+  <line x1="1050" y1="230" x2="1100" y2="180" stroke="#1AFFD5" stroke-width="0.5" opacity="0.06"/>
+  <line x1="1020" y1="300" x2="1080" y2="280" stroke="#1AFFD5" stroke-width="0.5" opacity="0.08"/>
+  <line x1="1080" y1="280" x2="1050" y2="350" stroke="#1AFFD5" stroke-width="0.5" opacity="0.06"/>
+  <line x1="1050" y1="350" x2="1100" y2="320" stroke="#1AFFD5" stroke-width="0.5" opacity="0.08"/>
+</svg>

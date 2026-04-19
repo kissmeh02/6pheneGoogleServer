@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#06080A"/>
+      <stop offset="100%" stop-color="#0C1118"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#1AFFD5" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#1AFFD5" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect width="800" height="600" fill="url(#glow)"/>
+
+  <!-- Hexagonal carbon lattice structure -->
+  <g transform="translate(400,300)" opacity="0.7">
+    <!-- Ring 1 - center hexagon -->
+    <polygon points="0,-40 34.6,-20 34.6,20 0,40 -34.6,20 -34.6,-20" fill="none" stroke="#1AFFD5" stroke-width="1.2" opacity="0.5"/>
+    <!-- Vertices -->
+    <circle cx="0" cy="-40" r="3" fill="#1AFFD5" opacity="0.8"/>
+    <circle cx="34.6" cy="-20" r="3" fill="#1AFFD5" opacity="0.8"/>
+    <circle cx="34.6" cy="20" r="3" fill="#1AFFD5" opacity="0.8"/>
+    <circle cx="0" cy="40" r="3" fill="#1AFFD5" opacity="0.8"/>
+    <circle cx="-34.6" cy="20" r="3" fill="#1AFFD5" opacity="0.8"/>
+    <circle cx="-34.6" cy="-20" r="3" fill="#1AFFD5" opacity="0.8"/>
+
+    <!-- Ring 2 - surrounding hexagons (6 of them) -->
+    <!-- Top -->
+    <polygon points="0,-40 34.6,-60 69.2,-40 69.2,0 34.6,20 0,0" fill="none" stroke="#1AFFD5" stroke-width="0.8" opacity="0.3"/>
+    <polygon points="0,-40 -34.6,-60 -69.2,-40 -69.2,0 -34.6,20 0,0" fill="none" stroke="#1AFFD5" stroke-width="0.8" opacity="0.3"/>
+    <!-- Middle -->
+    <polygon points="34.6,20 69.2,0 103.8,20 103.8,60 69.2,80 34.6,60" fill="none" stroke="#1AFFD5" stroke-width="0.8" opacity="0.3"/>
+    <polygon points="-34.6,20 -69.2,0 -103.8,20 -103.8,60 -69.2,80 -34.6,60" fill="none" stroke="#1AFFD5" stroke-width="0.8" opacity="0.3"/>
+    <!-- Bottom -->
+    <polygon points="0,40 34.6,60 34.6,100 0,120 -34.6,100 -34.6,60" fill="none" stroke="#1AFFD5" stroke-width="0.8" opacity="0.3"/>
+    <polygon points="0,-40 34.6,-60 34.6,-100 0,-120 -34.6,-100 -34.6,-60" fill="none" stroke="#1AFFD5" stroke-width="0.8" opacity="0.3"/>
+
+    <!-- Outer vertices -->
+    <circle cx="34.6" cy="-60" r="2.5" fill="#1AFFD5" opacity="0.5"/>
+    <circle cx="69.2" cy="-40" r="2.5" fill="#1AFFD5" opacity="0.5"/>
+    <circle cx="69.2" cy="0" r="2.5" fill="#1AFFD5" opacity="0.5"/>
+    <circle cx="-34.6" cy="-60" r="2.5" fill="#1AFFD5" opacity="0.5"/>
+    <circle cx="-69.2" cy="-40" r="2.5" fill="#1AFFD5" opacity="0.5"/>
+    <circle cx="-69.2" cy="0" r="2.5" fill="#1AFFD5" opacity="0.5"/>
+    <circle cx="103.8" cy="20" r="2.5" fill="#1AFFD5" opacity="0.5"/>
+    <circle cx="103.8" cy="60" r="2.5" fill="#1AFFD5" opacity="0.5"/>
+    <circle cx="69.2" cy="80" r="2.5" fill="#1AFFD5" opacity="0.5"/>
+    <circle cx="-103.8" cy="20" r="2.5" fill="#1AFFD5" opacity="0.5"/>
+    <circle cx="-103.8" cy="60" r="2.5" fill="#1AFFD5" opacity="0.5"/>
+    <circle cx="-69.2" cy="80" r="2.5" fill="#1AFFD5" opacity="0.5"/>
+    <circle cx="34.6" cy="100" r="2.5" fill="#1AFFD5" opacity="0.5"/>
+    <circle cx="0" cy="120" r="2.5" fill="#1AFFD5" opacity="0.5"/>
+    <circle cx="-34.6" cy="100" r="2.5" fill="#1AFFD5" opacity="0.5"/>
+    <circle cx="34.6" cy="-100" r="2.5" fill="#1AFFD5" opacity="0.5"/>
+    <circle cx="0" cy="-120" r="2.5" fill="#1AFFD5" opacity="0.5"/>
+    <circle cx="-34.6" cy="-100" r="2.5" fill="#1AFFD5" opacity="0.5"/>
+
+    <!-- Bond lines between atoms -->
+    <line x1="69.2" y1="0" x2="103.8" y2="20" stroke="#1AFFD5" stroke-width="0.6" opacity="0.25"/>
+    <line x1="69.2" y1="80" x2="103.8" y2="60" stroke="#1AFFD5" stroke-width="0.6" opacity="0.25"/>
+    <line x1="-69.2" y1="0" x2="-103.8" y2="20" stroke="#1AFFD5" stroke-width="0.6" opacity="0.25"/>
+    <line x1="-69.2" y1="80" x2="-103.8" y2="60" stroke="#1AFFD5" stroke-width="0.6" opacity="0.25"/>
+    <line x1="0" y1="-120" x2="34.6" y2="-100" stroke="#1AFFD5" stroke-width="0.6" opacity="0.25"/>
+    <line x1="0" y1="-120" x2="-34.6" y2="-100" stroke="#1AFFD5" stroke-width="0.6" opacity="0.25"/>
+    <line x1="0" y1="120" x2="34.6" y2="100" stroke="#1AFFD5" stroke-width="0.6" opacity="0.25"/>
+    <line x1="0" y1="120" x2="-34.6" y2="100" stroke="#1AFFD5" stroke-width="0.6" opacity="0.25"/>
+  </g>
+
+  <!-- Label -->
+  <text x="400" y="500" text-anchor="middle" font-family="monospace" font-size="11" fill="#1AFFD5" opacity="0.4" letter-spacing="3">HEXAGONAL CARBON LATTICE</text>
+  <text x="400" y="520" text-anchor="middle" font-family="monospace" font-size="9" fill="#5C6E7E" letter-spacing="2">C6 GRAPHENE STRUCTURE</text>
+</svg>

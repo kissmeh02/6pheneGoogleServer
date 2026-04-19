@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    width: 1200px; height: 630px; overflow: hidden;
+    background: linear-gradient(135deg, #06080A 0%, #0C1118 100%);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    position: relative;
+}
+/* Hex pattern overlay */
+body::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='69'%3E%3Cpolygon points='30,2 56,17.5 56,48.5 30,64 4,48.5 4,17.5' fill='none' stroke='%231AFFD5' stroke-width='0.5' opacity='0.1'/%3E%3Ccircle cx='30' cy='2' r='1.5' fill='%231AFFD5' opacity='0.15'/%3E%3Ccircle cx='56' cy='17.5' r='1.5' fill='%231AFFD5' opacity='0.15'/%3E%3Ccircle cx='56' cy='48.5' r='1.5' fill='%231AFFD5' opacity='0.15'/%3E%3Ccircle cx='30' cy='64' r='1.5' fill='%231AFFD5' opacity='0.15'/%3E%3Ccircle cx='4' cy='48.5' r='1.5' fill='%231AFFD5' opacity='0.15'/%3E%3Ccircle cx='4' cy='17.5' r='1.5' fill='%231AFFD5' opacity='0.15'/%3E%3C/svg%3E");
+    background-size: 60px 69px;
+    pointer-events: none;
+}
+/* Teal glow */
+body::after {
+    content: '';
+    position: absolute;
+    width: 700px; height: 500px;
+    top: -100px; left: -100px;
+    background: radial-gradient(ellipse, rgba(26,255,213,0.06) 0%, transparent 70%);
+    pointer-events: none;
+}
+.accent-line {
+    position: absolute; left: 80px; top: 100px;
+    width: 3px; height: 420px;
+    background: linear-gradient(180deg, transparent, #1AFFD5, transparent);
+    border-radius: 2px; opacity: 0.6;
+}
+.logo-area {
+    position: absolute; top: 130px; left: 115px;
+    display: flex; align-items: center; gap: 14px;
+}
+.logo-area img.icon { width: 72px; height: 72px; }
+.logo-area img.wordmark { height: 52px; width: auto; }
+.badge {
+    position: absolute; top: 148px; left: 560px;
+    background: rgba(240,165,0,0.12);
+    border: 1px solid rgba(240,165,0,0.4);
+    border-radius: 4px;
+    padding: 3px 12px;
+    font-family: 'Courier New', monospace;
+    font-size: 11px; letter-spacing: 2px;
+    color: #F0A500;
+}
+.headline {
+    position: absolute; top: 260px; left: 130px;
+    font-weight: 800; font-size: 50px;
+    color: #DCE8F0; letter-spacing: -1px;
+    line-height: 1.15;
+}
+.subline {
+    position: absolute; top: 330px; left: 130px;
+    font-weight: 800; font-size: 40px;
+    letter-spacing: -0.5px; line-height: 1.15;
+}
+.subline .teal { color: #1AFFD5; }
+.subline .white { color: #DCE8F0; }
+.desc {
+    position: absolute; top: 400px; left: 130px;
+    font-size: 19px; color: #8A9BAA; line-height: 1.6;
+}
+.divider {
+    position: absolute; top: 470px; left: 130px;
+    width: 770px; height: 1px;
+    background: rgba(26,255,213,0.2);
+}
+.sectors {
+    position: absolute; top: 490px; left: 130px;
+    display: flex; gap: 120px;
+}
+.sector-label {
+    font-family: 'Courier New', monospace;
+    font-size: 12px; letter-spacing: 2px;
+    color: #5C6E7E; text-transform: uppercase;
+}
+.sector-value {
+    font-family: 'Courier New', monospace;
+    font-size: 11px; color: #1AFFD5; opacity: 0.6;
+    margin-top: 4px;
+}
+.url {
+    position: absolute; bottom: 30px; left: 130px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px; color: #5C6E7E; letter-spacing: 1px;
+}
+.location {
+    position: absolute; bottom: 30px; right: 130px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px; color: #5C6E7E; letter-spacing: 0.5px;
+}
+</style>
+</head>
+<body>
+    <div class="accent-line"></div>
+    <div class="logo-area">
+        <img src="logo-icon.png" class="icon" alt="">
+        <img src="logo-wordmark.svg" class="wordmark" alt="6PHENE INC">
+    </div>
+    <div class="badge">R&D STAGE</div>
+    <div class="headline">Advanced Graphene Solutions</div>
+    <div class="subline">
+        <span class="teal">Roll-to-Roll LIG</span>
+        <span class="white"> Manufacturing</span>
+    </div>
+    <div class="desc">
+        Canada's first R2R laser-induced graphene production line<br>
+        Targeting 43+ substrate configurations &middot; Targeting 10&ndash;40&times; CVD cost reduction
+    </div>
+    <div class="divider"></div>
+    <div class="sectors">
+        <div>
+            <div class="sector-label">Defense</div>
+            <div class="sector-value">Ballistic Systems</div>
+        </div>
+        <div>
+            <div class="sector-label">Aerospace</div>
+            <div class="sector-value">Structural Panels</div>
+        </div>
+        <div>
+            <div class="sector-label">Sports</div>
+            <div class="sector-value">High-Performance</div>
+        </div>
+    </div>
+    <div class="url">6phene.com</div>
+    <div class="location">Ontario, Canada</div>
+</body>
+</html>

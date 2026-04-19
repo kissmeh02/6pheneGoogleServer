@@ -1,0 +1,22 @@
+/**
+ * variables.css
+ * Design tokens and CSS custom properties for 6PHENE INC
+ */
+
+:root {
+    --ink: #06080A;
+    --surface: #0C1118;
+    --surface2: #111820;
+    --surface3: #18222E;
+    --teal: #1AFFD5;
+    --amber: #F0A500;
+    --text: #DCE8F0;
+    --muted: #5C6E7E;
+    --glass-bg: rgba(12,17,24,0.6);
+    --glass-border: rgba(255,255,255,0.08);
+    --glass-border-hover: rgba(26,255,213,0.15);
+    --radius: 16px;
+    --radius-sm: 10px;
+    --radius-xs: 6px;
+    --transition: 200ms ease;
+}

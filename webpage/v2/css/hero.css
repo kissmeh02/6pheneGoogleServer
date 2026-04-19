@@ -1,0 +1,84 @@
+/**
+ * hero.css
+ * Hero section, stage banner, typewriter cursor
+ */
+
+/* Stage Banner */
+.stage-banner {
+    position: relative;
+    z-index: 2;
+    margin-top: 90px;
+    text-align: center;
+    padding: 10px 16px;
+    background: rgba(240,165,0,0.08);
+    border-bottom: 1px solid rgba(240,165,0,0.15);
+}
+.stage-banner span {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--amber);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* Hero */
+.hero {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 24px 60px;
+    overflow: hidden;
+}
+.hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 860px;
+}
+.hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    margin-bottom: 1.5rem;
+    color: #fff;
+    line-height: 1.08;
+    -webkit-text-stroke: 0.3px rgba(255,255,255,0.1);
+}
+.hero h1 .gradient-text {
+    background: linear-gradient(135deg, var(--teal), #0ea5e9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.hero-sub {
+    font-size: 1.15rem;
+    color: var(--muted);
+    max-width: 680px;
+    margin: 0 auto 2rem;
+    line-height: 1.7;
+}
+.hero-ctas {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+.hero-disclaimer {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--muted);
+    opacity: 0.7;
+}
+
+/* Typewriter Cursor */
+.typewriter-cursor {
+    display: inline-block;
+    width: 3px;
+    height: 1em;
+    background: var(--teal);
+    margin-left: 2px;
+    vertical-align: text-bottom;
+    animation: blink 0.8s step-end infinite;
+}

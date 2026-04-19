@@ -141,3 +141,9 @@ webpage/.venv/
 frontend.log
 backend.log
 
+
+# Claude Code
+.claude/
+
+# Puppeteer cache
+.cache/
