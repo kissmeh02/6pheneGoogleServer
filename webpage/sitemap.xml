@@ -5,31 +5,31 @@
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://6phene.com/</loc>
-    <lastmod>2026-04-19</lastmod>
+    <lastmod>2026-04-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://6phene.com/#products</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://6phene.com/products.html</loc>
+    <lastmod>2026-04-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://6phene.com/#technology</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://6phene.com/technology.html</loc>
+    <lastmod>2026-04-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://6phene.com/#about</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://6phene.com/about.html</loc>
+    <lastmod>2026-04-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://6phene.com/#contact</loc>
-    <lastmod>2026-04-19</lastmod>
+    <loc>https://6phene.com/contact.html</loc>
+    <lastmod>2026-04-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
