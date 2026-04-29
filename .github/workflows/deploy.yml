@@ -21,6 +21,9 @@ jobs:
             set -e
             cd /root/webbpage
 
+            # Discard local changes from previous deploy's file copies
+            git checkout -- .
+
             # Pull latest code
             git pull origin main
 
