@@ -10,6 +10,8 @@ jobs:
     name: Deploy to GCP Server
     runs-on: ubuntu-latest
 
+    env:
+      W3F_ACCESS_KEY: ${{ secrets.W3F_ACCESS_KEY }}
     steps:
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1
@@ -17,6 +19,7 @@ jobs:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          envs: W3F_ACCESS_KEY
           script: |
             set -e
             cd /root/webbpage
@@ -26,6 +29,9 @@ jobs:
 
             # Pull latest code
             git pull origin main
+
+            # Inject Web3Forms key into JS
+            sed -i "s/%%W3F_ACCESS_KEY%%/$W3F_ACCESS_KEY/g" webpage/v2/js/forms.js
 
             # Deploy v2 as the main site — copy v2 files over old webpage root
             cp -f webpage/v2/index.html webpage/index.html

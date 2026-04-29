@@ -7,7 +7,7 @@
 (function () {
     'use strict';
 
-    var W3F_KEY = 'eb945d5f-6839-415f-b1ba-58be3bda697e';
+    var W3F_KEY = '%%W3F_ACCESS_KEY%%';
 
     // ===== PRODUCT DETAIL TOGGLES =====
     window.toggleDetails = function (btn) {

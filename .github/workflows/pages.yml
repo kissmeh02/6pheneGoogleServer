@@ -25,6 +25,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Inject secrets
+        run: |
+          sed -i "s/%%W3F_ACCESS_KEY%%/${{ secrets.W3F_ACCESS_KEY }}/g" webpage/v2/js/forms.js
+
       - name: Prepare site
         run: |
           mkdir -p _site
